@@ -21,15 +21,19 @@
  */
 
 class ChatRoom {
-    private:
+    protected:
         vector<Users*> users;
-        vector<string*> chatHistory;
+        vector<string> chatHistory; //can be normal string. They use String* because it can be dynamic array of string. Strings are immutable anyways.
 
     public:
-        virtual void registerUser(Users user) = 0;
-        virtual void sendMessage(string message, Users fromUser) = 0;
-        virtual void saveMessage(string message, Users fromUser) = 0;
-        virtual void removeUser(Users user) = 0;
+        virtual ~ChatRoom() = default;
+        virtual void registerUser(Users* user) = 0;
+        virtual void sendMessage(string message, Users* fromUser) = 0;
+        virtual void saveMessage(string message, Users* fromUser) = 0;
+        virtual void removeUser(Users* user) = 0;
+
+        virtual const std::vector<std::string>& getChatHistory() const { return chatHistory; }
+        virtual std::vector<Users*> getUserList() const { return users; }
 };
 
 #endif

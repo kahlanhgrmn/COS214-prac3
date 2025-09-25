@@ -23,15 +23,18 @@
  */
 class Users {
     protected:
-        vector<ChatRoom*> chatRooms;
-        string name;
+        vector<ChatRoom*> chatRooms; //mediator
+        string name; 
         list<Command*> commandQueue;
         
     public:
-        void send(string message, ChatRoom room);
-        void receive(string message, Users fromUser, ChatRoom room);
+        void send(string message, ChatRoom* room);
+        void receive(string message, Users* fromUser, ChatRoom* room);
         void addCommand(Command command);
         void executeAll();
+
+        //additional functions
+        const string& getName() const { return name; }
 
 };
 
