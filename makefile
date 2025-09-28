@@ -29,7 +29,7 @@ COMMON_SOURCES = ChatRoom.cpp \
           SaveMessageCommand.cpp
 
 MAIN_SOURCE = DemoMain.cpp
-TEST_MAIN_SOURCE = Main.cpp
+TEST_MAIN_SOURCE = TestingMain.cpp
 
 # Object files
 COMMON_OBJECTS = $(COMMON_SOURCES:.cpp=.o)
