@@ -20,13 +20,33 @@ TEST_TARGET = test_petspace
 #           MessageHistoryIterator.cpp \
 #           UserIterator.cpp \
 #           Aggregate.cpp
+# COMMON_SOURCES = ChatRoom.cpp \
+#           CtrlCat.cpp \
+#           Dogorithm.cpp \
+#           Users.cpp \
+#           Command.cpp \
+#           SendMessageCommand.cpp \
+#           SaveMessageCommand.cpp
+
 COMMON_SOURCES = ChatRoom.cpp \
           CtrlCat.cpp \
           Dogorithm.cpp \
           Users.cpp \
           Command.cpp \
           SendMessageCommand.cpp \
-          SaveMessageCommand.cpp
+          SaveMessageCommand.cpp \
+          BasicUser.cpp \
+          AdminUser.cpp \
+          ModeratorUser.cpp \
+          UserFactory.cpp \
+          BasicUserFactory.cpp \
+          AdminUserFactory.cpp \
+          ModeratorUserFactory.cpp \
+          UserCreationSystem.cpp \
+          UserIterator.cpp \
+          MessageHistoryIterator.cpp \
+          ChatRoomIterator.cpp \
+          IteratorCreator.cpp
 
 MAIN_SOURCE = DemoMain.cpp
 TEST_MAIN_SOURCE = TestingMain.cpp
