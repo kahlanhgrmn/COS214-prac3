@@ -37,6 +37,9 @@ class ChatRoom {
         virtual void saveMessage(string message, Users* fromUser) = 0; //part of receiver in command pattern
         virtual void removeUser(Users* user) = 0;
 
+        const std::vector<Users*>& getUsers()const {return users;}
+        const std::vector<std::string>& getChatHistory()const {return chatHistory;}
+
         //additional functions
         string getChatRoomName() { return name; }
         virtual void printChatRoomHistory() const = 0;

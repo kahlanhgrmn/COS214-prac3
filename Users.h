@@ -36,6 +36,10 @@ class Users {
         virtual void addCommand(Command* command);
         virtual void executeAll();
 
+        virtual std::string getUserType() const = 0;
+        virtual bool hasPrivilege(const std::string& privilege)const {return false;}
+        const std::vector<ChatRoom*>& getChatRooms() const {return chatRooms;}
+
         //additional functions
         const string& getName() const { return name; }
 
