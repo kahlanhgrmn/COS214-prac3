@@ -26,8 +26,8 @@ void CtrlCat::registerUser(Users* user) {
 
     users.push_back(user);
 
-    string message = user->getName() + " joined the chatroom";
-    saveMessage(message, nullptr);
+    string message = "[CTRLCAT] " + user->getName() + " joined the chatroom";
+    // saveMessage(message, nullptr);
     cout << message << endl;
 }
 
@@ -39,8 +39,6 @@ void CtrlCat::registerUser(Users* user) {
 /// @param fromUser is the user that sent the message
 void CtrlCat::sendMessage(string message, Users* fromUser)
 {
-    saveMessage(message, fromUser);
-
     for (Users* user : users) {
         if (user != fromUser) {
             user->receive(message, fromUser, this);
@@ -50,7 +48,7 @@ void CtrlCat::sendMessage(string message, Users* fromUser)
 
 void CtrlCat::saveMessage(string message, Users *fromUser)
 {
-    chatHistory.push_back(message);
+    chatHistory.push_back("From " + fromUser->getName() + ": " + message);
 }
 
 void CtrlCat::removeUser(Users *user)
@@ -59,14 +57,41 @@ void CtrlCat::removeUser(Users *user)
         return;
     }
 
-    for (int i = 0; i < users.size(); i++) {
+    for (size_t i = 0; i < users.size(); i++) {
         if (users[i] == user) {
-            string message = user->getName() + " left the chatroom";
+            string message = "[" + this->getChatRoomName() + "] " + user->getName() + " left the chatroom";
             users.erase(users.begin() + i); //can't delete user because they may be part of multiple chat rooms
 
-            saveMessage(message, nullptr);
+            // saveMessage(message, nullptr);
             cout << message << endl;
             break;
         }
     }
+}
+
+void CtrlCat::printChatRoomHistory() const
+{
+    cout << "\n=== CtrlCat Chat History ===" << endl;
+    if (chatHistory.empty()) {
+        cout << "No messages in CtrlCat history." << endl;
+    } else {
+        for (size_t i = 0; i < chatHistory.size(); i++) {
+            cout << "[" << i + 1 << "] " << chatHistory[i] << endl;
+        }
+    }
+    cout << "============================" << endl;
+
+}
+
+void CtrlCat::getUserList() const
+{
+    cout << "\n=== CtrlCat Users ===" << endl;
+    if (users.empty()) {
+        cout << "No users in chatroom." << endl;
+    } else {
+        for (size_t i = 0; i < users.size(); i++) {
+            cout << users[i]->getName() << endl;
+        }
+    }
+    cout << "============================" << endl;
 }

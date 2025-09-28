@@ -37,7 +37,7 @@
  /// @param room is the chatroom the message was sent in.
  void Users::receive(string message, Users *fromUser, ChatRoom *room)
  {
-    cout << name << " received from " << fromUser->getName() << " : " << message << endl;
+    cout << "[" << room->getChatRoomName() << "] " << name << " received from " << fromUser->getName() << " : " << message << endl;
  }
 
  void Users::addCommand(Command* command)
