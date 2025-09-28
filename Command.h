@@ -24,10 +24,12 @@ class Command {
     protected:
         ChatRoom* chatRoom;
         string message;
-        Users fromUser;
+        Users* fromUser;
 
     public:
-        virtual void execute() = 0;
+        Command(ChatRoom* c, string m, Users* u) : chatRoom(c), message(m), fromUser(u) {}
+        ~Command () {}
+        virtual void execute() = 0; //abstract and will be implemented in the concreteclass and knows which receiver to call
 
 
 };

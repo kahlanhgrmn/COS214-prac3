@@ -8,7 +8,8 @@
 #ifndef USERS_H
 #define USERS_H
 
- #include "ChatRoom.h"
+class ChatRoom;
+
  #include "Command.h"
  #include <string>
  #include <vector>
@@ -28,10 +29,11 @@ class Users {
         list<Command*> commandQueue;
         
     public:
-        void send(string message, ChatRoom* room);
-        void receive(string message, Users* fromUser, ChatRoom* room);
-        void addCommand(Command command);
-        void executeAll();
+        Users(const string& userName) : name(userName) {}
+        virtual void send(string message, ChatRoom* room);
+        virtual void receive(string message, Users* fromUser, ChatRoom* room);
+        virtual void addCommand(Command* command);
+        virtual void executeAll();
 
         //additional functions
         const string& getName() const { return name; }

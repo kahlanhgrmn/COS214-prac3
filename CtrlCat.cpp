@@ -6,15 +6,13 @@
  */
 
  #include "CtrlCat.h"
+ #include "Users.h"
  #include <iostream>
  using namespace std;
 
  /// @brief Destructor for the CtrlCat deallocates dynamically allocated users
  CtrlCat::~CtrlCat()
 {
-    for (Users* user : users) {
-        delete user;
-    }
     users.clear();
 }
 
@@ -52,10 +50,6 @@ void CtrlCat::sendMessage(string message, Users* fromUser)
 
 void CtrlCat::saveMessage(string message, Users *fromUser)
 {
-    if (fromUser == nullptr) {
-        return;
-    }
-
     chatHistory.push_back(message);
 }
 
@@ -68,11 +62,11 @@ void CtrlCat::removeUser(Users *user)
     for (int i = 0; i < users.size(); i++) {
         if (users[i] == user) {
             string message = user->getName() + " left the chatroom";
-            delete user;
-            users.erase(users.begin() + i);
+            users.erase(users.begin() + i); //can't delete user because they may be part of multiple chat rooms
 
             saveMessage(message, nullptr);
             cout << message << endl;
+            break;
         }
     }
 }

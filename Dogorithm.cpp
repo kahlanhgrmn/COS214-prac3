@@ -6,15 +6,13 @@
  */
 
  #include "Dogorithm.h"
+ #include "Users.h"
  #include <iostream>
  using namespace std;
 
- Dogorithm::~Dogorithm()
+ Dogorithm::~Dogorithm() //deletion of users handled in main
  {
-    for (Users* user : users) {
-        delete user;
-    }
-    users.clear();
+    users.clear(); //can't actually delete user here because it might belong to another chatroom as well.
  }
 
  void Dogorithm::registerUser(Users *user)
@@ -43,10 +41,6 @@
 
  void Dogorithm::saveMessage(string message, Users *fromUser)
  {
-    if (fromUser == nullptr) {
-        return;
-    }
-
     chatHistory.push_back(message);
  }
 
@@ -56,14 +50,15 @@
         return;
     }
 
+    //user might be part of multiple chatrooms, therefore can't just delete.
     for (int i = 0; i < users.size(); i++) {
         if (users[i] == user) {
             string message = user->getName() + " left the chatroom";
-            delete user;
             users.erase(users.begin() + i);
 
             saveMessage(message, nullptr);
             cout << message << endl;
+            break;
         }
     }
  }

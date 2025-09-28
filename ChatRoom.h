@@ -8,9 +8,12 @@
 #ifndef CHATROOM_H
 #define CHATROOM_H
 
- #include "Users.h"
- #include <vector>
- using namespace std;
+/// @brief Forward declaring that the users class exists
+class Users;
+
+#include <vector>
+#include <string>
+using namespace std;
 
  /**
  * @class ChatRoom
@@ -28,8 +31,8 @@ class ChatRoom {
     public:
         virtual ~ChatRoom() = default;
         virtual void registerUser(Users* user) = 0;
-        virtual void sendMessage(string message, Users* fromUser) = 0;
-        virtual void saveMessage(string message, Users* fromUser) = 0;
+        virtual void sendMessage(string message, Users* fromUser) = 0; //part of receiver in command pattern
+        virtual void saveMessage(string message, Users* fromUser) = 0; //part of receiver in command pattern
         virtual void removeUser(Users* user) = 0;
 
         virtual const std::vector<std::string>& getChatHistory() const { return chatHistory; }

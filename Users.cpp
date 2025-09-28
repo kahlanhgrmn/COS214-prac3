@@ -6,6 +6,9 @@
  */
 
  #include "ChatRoom.h"
+ #include "Command.h"
+ #include "SendMessageCommand.h"
+ #include "SaveMessageCommand.h"
  #include "Users.h"
  #include <iostream>
  #include <string>
@@ -19,7 +22,11 @@
  /// @param room is the chatroom the user whats to send the message in.
  void Users::send(string message, ChatRoom* room)
  {
-    room->sendMessage(message, this);
+   Command* sendMessageCmd = new SendMessageCommand(room, message, this);
+   Command* saveMessageCmd = new SaveMessageCommand(room, message, this);
+   commandQueue.push_back(sendMessageCmd);
+   commandQueue.push_back(saveMessageCmd);
+   executeAll();
  }
 
  
@@ -31,4 +38,21 @@
  void Users::receive(string message, Users *fromUser, ChatRoom *room)
  {
     cout << name << " received from " << fromUser->getName() << " : " << message << endl;
+ }
+
+ void Users::addCommand(Command* command)
+ {
+   if (command == nullptr) {
+      return;
+   }
+   commandQueue.push_back(command);
+ }
+
+ void Users::executeAll()
+ {
+   for (Command* cmd : commandQueue) {
+      cmd->execute(); 
+      delete cmd; //cleaning up memory
+   }
+   commandQueue.clear();
  }
