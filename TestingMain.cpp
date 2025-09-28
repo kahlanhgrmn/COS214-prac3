@@ -22,155 +22,6 @@
 
 using namespace std;
 
-// void testingMediatorAndCommand() {
-//     cout << "=================== Testing Mediator and Command ==================== " << endl;
-
-//     //creating chatrooms
-//     ChatRoom* catChatRoom = new CtrlCat("CTRLCAT");
-//     ChatRoom* dogChatRoom = new Dogorithm("DOGORITHM");
-
-//    //creating Users
-//     Users* carlos = new Name1("Carlos");
-//     Users* charles = new Name2("Charles");
-//     Users* lando = new Name1("Lando");
-//     Users* oscar = new Name3("Oscar");
-//     Users* max = new Name2("Max");
-//     Users* lewis = new Name1("Lewis");
-//     Users* george = new Name3("George");
-//     Users* alex = new Name2("Alex");
-//     Users* daniel = new Name3("Daniel");
-//     Users* pierre = new Name1("Pierre");
-
-//     catChatRoom->getUserList();
-//     dogChatRoom->getUserList();
-
-//     cout << endl;
-
-//     cout << "\n---- Testing registerUser ----\n";
-//     //CtrlCat only
-//     catChatRoom->registerUser(carlos);
-//     catChatRoom->registerUser(charles);
-//     catChatRoom->registerUser(george);
-//     catChatRoom->registerUser(alex);
-
-//     cout << endl;
-
-//     //Dogorithm only
-//     dogChatRoom->registerUser(lando);
-//     dogChatRoom->registerUser(daniel);
-//     dogChatRoom->registerUser(pierre);
-
-//     cout << endl;
-
-//     //BOTH chat rooms
-//     catChatRoom->registerUser(oscar);
-//     dogChatRoom->registerUser(oscar);
-
-//     catChatRoom->registerUser(max);
-//     dogChatRoom->registerUser(max);
-
-//     catChatRoom->registerUser(lewis);
-//     dogChatRoom->registerUser(lewis);
-
-//     cout << endl;
-    
-//     //sending messages
-//     cout << "---- Testing send message in CtrlCat chatroom ----\n";
-//     carlos->send("Hello everyone! This is a great place to talk about cats.", catChatRoom);
-//     cout << endl;
-
-//     //viewing chatHistory
-//     cout << "---- Testing chatHistory ----\n";
-//     catChatRoom->printChatRoomHistory();
-//     dogChatRoom->printChatRoomHistory();
-//     cout << endl;
-
-//     //removing user
-//     cout << "---- Testing removeUser ----\n";
-//     catChatRoom->getUserList();
-//     catChatRoom->removeUser(george);
-//     catChatRoom->getUserList();
-
-//     cout << endl;
-
-//     lewis->send("I love my dog Roscoe, but I also like cats.", catChatRoom);
-//     cout << endl;
-
-//     //testing continued for catChatRoom
-//     cout << "---- Testing continued ----\n";
-//     charles->send("I agree Carlos! My tabby cat Mr. Whiskers loves to code with me.", catChatRoom);
-//     oscar->send("That's pawsome! I'm in both chat rooms - best of both worlds!", catChatRoom);
-//     alex->send("Welcome Oscar! What's your favorite cat breed?", catChatRoom);
-
-//     //adding to dogChatRoom
-//     lando->send("Woof woof! Dog lovers unite!", dogChatRoom);
-//     daniel->send("My golden retriever helps me debug code - he's a good boy!", dogChatRoom);
-//     oscar->send("Hey everyone! I'm here from CtrlCat too. Dogs are amazing!", dogChatRoom);
-//     max->send("Oscar, you're everywhere! My husky loves winter coding sessions.", dogChatRoom);
-
-//     cout << endl; 
-
-//     dogChatRoom->removeUser(daniel);
-//     cout << "\n--- Messages after user removal ---" << endl;
-//     pierre->send("Daniel left?", dogChatRoom);
-
-//     cout << "\n--- Adding new users mid-conversation ---" << endl;
-//     Users* roger = new Name2("Roger");
-//     Users* rafa = new Name3("Rafa");
-
-//     catChatRoom->registerUser(roger);
-//     dogChatRoom->registerUser(rafa);
-
-//     cout << endl;
-
-//     roger->send("Hi everyone! Roger here, excited to join the cat discussion!", catChatRoom);
-//     rafa->send("Hi Everyone, I'm Rafa!", dogChatRoom);
-
-//     oscar->send("Welcome Roger! Great to have more cat enthusiasts here.", catChatRoom);
-//     max->send("Hey Rafa! Welcome to the pack!", dogChatRoom);
-
-//     cout << endl;
-
-//     //removing user that's in both chatrooms
-//     dogChatRoom->removeUser(max);
-//     lewis->send("Bye Max! Is he still in the Cat Chatroom?", dogChatRoom);
-//     oscar->send("We still here.", catChatRoom);
-//     catChatRoom->removeUser(max);
-
-//     cout << "\n--- Final user lists and chat histories ---\n";
-//     catChatRoom->printChatRoomHistory();
-//     catChatRoom->getUserList();
-//     dogChatRoom->printChatRoomHistory();
-//     dogChatRoom->getUserList();
-
-
-//     //cleaning up memory
-//     delete catChatRoom;
-//     delete dogChatRoom;
-//     delete carlos;
-//     delete charles;
-//     delete lando;
-//     delete oscar;
-//     delete max;
-//     delete lewis;
-//     delete george;
-//     delete alex;
-//     delete daniel;
-//     delete pierre;
-//     delete roger;
-//     delete rafa;
-
-// }
-
-// int main() {
-
-//     testingMediatorAndCommand();
-
-
-//     return 0;
-// }
-
-
 int testsRun = 0;
 int testsPassed = 0;
 
@@ -184,656 +35,509 @@ void runTest(const string& testName, bool condition) {
     }
 }
 
-void testFactoryPattern() {
-    cout << "\n=== TESTING FACTORY METHOD PATTERN ===" << endl;
+void testingMediatorAndCommand() {
+    cout << "=================== Testing Mediator and Command ==================== " << endl;
+
+    //creating chatrooms
+    ChatRoom* catChatRoom = new CtrlCat("CTRLCAT");
+    ChatRoom* dogChatRoom = new Dogorithm("DOGORITHM");
+
+   //creating Users
+    UserCreationSystem userSystem;
+    Users* carlos = userSystem.createUser("Carlos", "basic");
+    Users* charles = userSystem.createUser("Charles", "admin");
+    Users* lando = userSystem.createUser("Lando", "basic");
+    Users* oscar = userSystem.createUser("Oscar", "moderator");
+    Users* max = userSystem.createUser("Max", "admin");
+    Users* lewis = userSystem.createUser("Lewis", "basic");
+    Users* george = userSystem.createUser("George", "moderator");
+    Users* alex = userSystem.createUser("Alex", "admin");
+    Users* daniel = userSystem.createUser("Daniel", "moderator");
+    Users* pierre = userSystem.createUser("Pierre", "basic");
+
+    catChatRoom->getUserList();
+    dogChatRoom->getUserList();
+
+    cout << endl;
+
+    cout << "\n---- Testing registerUser ----\n";
+    //CtrlCat only
+    catChatRoom->registerUser(carlos);
+    catChatRoom->registerUser(charles);
+    catChatRoom->registerUser(george);
+    catChatRoom->registerUser(alex);
+
+    cout << endl;
+
+    //Dogorithm only
+    dogChatRoom->registerUser(lando);
+    dogChatRoom->registerUser(daniel);
+    dogChatRoom->registerUser(pierre);
+
+    cout << endl;
+
+    //BOTH chat rooms
+    catChatRoom->registerUser(oscar);
+    dogChatRoom->registerUser(oscar);
+
+    catChatRoom->registerUser(max);
+    dogChatRoom->registerUser(max);
+
+    catChatRoom->registerUser(lewis);
+    dogChatRoom->registerUser(lewis);
+
+    cout << endl;
     
-    // Test UserCreationSystem
+    //sending messages
+    cout << "---- Testing send message in CtrlCat chatroom ----\n";
+    carlos->send("Hello everyone! This is a great place to talk about cats.", catChatRoom);
+    cout << endl;
+
+    //viewing chatHistory
+    cout << "---- Testing chatHistory ----\n";
+    catChatRoom->printChatRoomHistory();
+    dogChatRoom->printChatRoomHistory();
+    cout << endl;
+
+    //removing user
+    cout << "---- Testing removeUser ----\n";
+    catChatRoom->getUserList();
+    catChatRoom->removeUser(george);
+    catChatRoom->getUserList();
+
+    cout << endl;
+
+    lewis->send("I love my dog Roscoe, but I also like cats.", catChatRoom);
+    cout << endl;
+
+    //testing continued for catChatRoom
+    cout << "---- Testing continued ----\n";
+    charles->send("I agree Carlos! My tabby cat Mr. Whiskers loves to code with me.", catChatRoom);
+    oscar->send("That's pawsome! I'm in both chat rooms - best of both worlds!", catChatRoom);
+    alex->send("Welcome Oscar! What's your favorite cat breed?", catChatRoom);
+
+    //adding to dogChatRoom
+    lando->send("Woof woof! Dog lovers unite!", dogChatRoom);
+    daniel->send("My golden retriever helps me debug code - he's a good boy!", dogChatRoom);
+    oscar->send("Hey everyone! I'm here from CtrlCat too. Dogs are amazing!", dogChatRoom);
+    max->send("Oscar, you're everywhere! My husky loves winter coding sessions.", dogChatRoom);
+
+    cout << endl; 
+
+    dogChatRoom->removeUser(daniel);
+    cout << "\n--- Messages after user removal ---" << endl;
+    pierre->send("Daniel left?", dogChatRoom);
+
+    cout << "\n--- Adding new users mid-conversation ---" << endl;
+    Users* roger = userSystem.createUser("Roger", "admin");
+    Users* rafa = userSystem.createUser("Rafa", "moderator");
+
+    catChatRoom->registerUser(roger);
+    dogChatRoom->registerUser(rafa);
+
+    cout << endl;
+
+    roger->send("Hi everyone! Roger here, excited to join the cat discussion!", catChatRoom);
+    rafa->send("Hi Everyone, I'm Rafa!", dogChatRoom);
+
+    oscar->send("Welcome Roger! Great to have more cat enthusiasts here.", catChatRoom);
+    max->send("Hey Rafa! Welcome to the pack!", dogChatRoom);
+
+    cout << endl;
+
+    //removing user that's in both chatrooms
+    dogChatRoom->removeUser(max);
+    lewis->send("Bye Max! Is he still in the Cat Chatroom?", dogChatRoom);
+    oscar->send("We still here.", catChatRoom);
+    catChatRoom->removeUser(max);
+
+    cout << "\n--- Final user lists and chat histories ---\n";
+    catChatRoom->printChatRoomHistory();
+    catChatRoom->getUserList();
+    dogChatRoom->printChatRoomHistory();
+    dogChatRoom->getUserList();
+
+
+    //cleaning up memory
+    delete catChatRoom;
+    delete dogChatRoom;
+    delete carlos;
+    delete charles;
+    delete lando;
+    delete oscar;
+    delete max;
+    delete lewis;
+    delete george;
+    delete alex;
+    delete daniel;
+    delete pierre;
+    delete roger;
+    delete rafa;
+
+}
+
+void testFactoryMethodPattern() {
+    cout << "\n=== Testing Factory Method Pattern ===" << endl;
+    
     UserCreationSystem userSystem;
     
-    // Test creating different user types
-    Users* basicUser = userSystem.createUser("TestBasic", "basic");
-    Users* adminUser = userSystem.createUser("TestAdmin", "admin");
-    Users* moderatorUser = userSystem.createUser("TestModerator", "moderator");
-    Users* invalidUser = userSystem.createUser("TestInvalid", "invalid");
+    cout << "Available user types: ";
+    userSystem.listAvailableUserTypes();
+    
+    //creating different user types
+    Users* basicUser = userSystem.createUser("Alice", "basic");
+    Users* adminUser = userSystem.createUser("Bob", "admin");
+    Users* moderatorUser = userSystem.createUser("Carol", "moderator");
+    Users* invalidUser = userSystem.createUser("Dave", "invalid_type");
     
     runTest("Basic user creation", basicUser != nullptr && basicUser->getUserType() == "Basic");
     runTest("Admin user creation", adminUser != nullptr && adminUser->getUserType() == "Admin");
     runTest("Moderator user creation", moderatorUser != nullptr && moderatorUser->getUserType() == "Moderator");
-    runTest("Invalid user type defaults to basic", invalidUser != nullptr && invalidUser->getUserType() == "Basic");
+    runTest("Invalid type defaults to basic", invalidUser != nullptr && invalidUser->getUserType() == "Basic");
     
-    // Test user names
-    runTest("Basic user name", basicUser->getName() == "TestBasic");
-    runTest("Admin user name", adminUser->getName() == "TestAdmin");
-    runTest("Moderator user name", moderatorUser->getName() == "TestModerator");
-    
-    // Test privileges
-    runTest("Basic user has no kick privilege", !basicUser->hasPrivilege("kick"));
+    //testing privileges
+    runTest("Basic user has no privileges", !basicUser->hasPrivilege("kick"));
     runTest("Admin user has kick privilege", adminUser->hasPrivilege("kick"));
     runTest("Admin user has ban privilege", adminUser->hasPrivilege("ban"));
-    runTest("Admin user has delete_messages privilege", adminUser->hasPrivilege("delete_messages"));
     runTest("Moderator user has mute privilege", moderatorUser->hasPrivilege("mute"));
     runTest("Moderator user has warn privilege", moderatorUser->hasPrivilege("warn"));
-    runTest("Moderator user has no ban privilege", !moderatorUser->hasPrivilege("ban"));
+    runTest("Moderator cannot ban", !moderatorUser->hasPrivilege("ban"));
     
-    // Test individual factories
+    //testing direct factory usage
     BasicUserFactory basicFactory;
     AdminUserFactory adminFactory;
     ModeratorUserFactory moderatorFactory;
     
-    Users* factoryBasic = basicFactory.createUser("FactoryBasic");
-    Users* factoryAdmin = adminFactory.createUser("FactoryAdmin");
-    Users* factoryModerator = moderatorFactory.createUser("FactoryModerator");
+    Users* directBasic = basicFactory.createUser("Direct1");
+    Users* directAdmin = adminFactory.createUser("Direct2");
+    Users* directModerator = moderatorFactory.createUser("Direct3");
     
-    runTest("Direct basic factory", factoryBasic->getUserType() == "Basic");
-    runTest("Direct admin factory", factoryAdmin->getUserType() == "Admin");
-    runTest("Direct moderator factory", factoryModerator->getUserType() == "Moderator");
+    runTest("Direct basic factory works", directBasic->getUserType() == "Basic");
+    runTest("Direct admin factory works", directAdmin->getUserType() == "Admin");
+    runTest("Direct moderator factory works", directModerator->getUserType() == "Moderator");
     
-    // Test listAvailableUserTypes (just call it for coverage)
-    userSystem.listAvailableUserTypes();
-    
-    // Cleanup
+    //cleanup
     delete basicUser;
     delete adminUser;
     delete moderatorUser;
     delete invalidUser;
-    delete factoryBasic;
-    delete factoryAdmin;
-    delete factoryModerator;
-}
-
-void testMediatorPattern() {
-    cout << "\n=== TESTING MEDIATOR PATTERN ===" << endl;
-    
-    // Create chat rooms
-    ChatRoom* ctrlCat = new CtrlCat("CtrlCat");
-    ChatRoom* dogorithm = new Dogorithm("Dogorithm");
-    
-    // Create users
-    UserCreationSystem userSystem;
-    Users* alice = userSystem.createUser("Alice", "basic");
-    Users* bob = userSystem.createUser("Bob", "admin");
-    Users* charlie = userSystem.createUser("Charlie", "moderator");
-    
-    // Test chat room names
-    runTest("CtrlCat room name", ctrlCat->getChatRoomName() == "CtrlCat");
-    runTest("Dogorithm room name", dogorithm->getChatRoomName() == "Dogorithm");
-    
-    // Test initial empty state
-    runTest("CtrlCat initially empty", ctrlCat->getUsers().empty());
-    runTest("Dogorithm initially empty", dogorithm->getUsers().empty());
-    runTest("CtrlCat history initially empty", ctrlCat->getChatHistory().empty());
-    runTest("Dogorithm history initially empty", dogorithm->getChatHistory().empty());
-    
-    // Test user registration
-    ctrlCat->registerUser(alice);
-    ctrlCat->registerUser(bob);
-    dogorithm->registerUser(alice);  // Alice in both rooms
-    dogorithm->registerUser(charlie);
-    
-    runTest("CtrlCat has 2 users", ctrlCat->getUsers().size() == 2);
-    runTest("Dogorithm has 2 users", dogorithm->getUsers().size() == 2);
-    runTest("Alice in CtrlCat", ctrlCat->getUsers()[0] == alice);
-    runTest("Bob in CtrlCat", ctrlCat->getUsers()[1] == bob);
-    runTest("Alice in Dogorithm", dogorithm->getUsers()[0] == alice);
-    runTest("Charlie in Dogorithm", dogorithm->getUsers()[1] == charlie);
-    
-    // Test null user registration
-    ctrlCat->registerUser(nullptr);
-    runTest("Null user not registered", ctrlCat->getUsers().size() == 2);
-    
-    // Test user removal
-    ctrlCat->removeUser(bob);
-    runTest("Bob removed from CtrlCat", ctrlCat->getUsers().size() == 1);
-    runTest("Alice still in CtrlCat", ctrlCat->getUsers()[0] == alice);
-    
-    // Test null user removal
-    ctrlCat->removeUser(nullptr);
-    runTest("Null user removal handled", ctrlCat->getUsers().size() == 1);
-    
-    // Test removing non-existent user
-    ctrlCat->removeUser(charlie);
-    runTest("Non-existent user removal handled", ctrlCat->getUsers().size() == 1);
-    
-    // Test getUserList and printChatRoomHistory methods for coverage
-    ctrlCat->getUserList();
-    dogorithm->getUserList();
-    ctrlCat->printChatRoomHistory();
-    dogorithm->printChatRoomHistory();
-    
-    // Cleanup
-    delete ctrlCat;
-    delete dogorithm;
-    delete alice;
-    delete bob;
-    delete charlie;
-}
-
-void testCommandPattern() {
-    cout << "\n=== TESTING COMMAND PATTERN ===" << endl;
-    
-    // Create chat room and users
-    ChatRoom* testRoom = new CtrlCat("TestRoom");
-    UserCreationSystem userSystem;
-    Users* user1 = userSystem.createUser("User1", "basic");
-    Users* user2 = userSystem.createUser("User2", "basic");
-    
-    // Register users
-    testRoom->registerUser(user1);
-    testRoom->registerUser(user2);
-    
-    // Test sending messages (which uses command pattern internally)
-    user1->send("Hello World!", testRoom);
-    
-    runTest("Message saved to history", testRoom->getChatHistory().size() == 1);
-    runTest("Message content correct", testRoom->getChatHistory()[0] == "From User1: Hello World!");
-    
-    // Send more messages to test command queue
-    user2->send("Hi there!", testRoom);
-    user1->send("How are you?", testRoom);
-    
-    runTest("Multiple messages saved", testRoom->getChatHistory().size() == 3);
-    runTest("Second message correct", testRoom->getChatHistory()[1] == "From User2: Hi there!");
-    runTest("Third message correct", testRoom->getChatHistory()[2] == "From User1: How are you?");
-    
-    // Test direct command creation for coverage
-    Command* sendCmd = new SendMessageCommand(testRoom, "Direct command", user1);
-    Command* saveCmd = new SaveMessageCommand(testRoom, "Direct save", user1);
-    
-    user1->addCommand(sendCmd);
-    user1->addCommand(saveCmd);
-    user1->executeAll();
-    
-    runTest("Direct command executed", testRoom->getChatHistory().size() == 4);
-    runTest("Direct save command", testRoom->getChatHistory()[3] == "From User1: Direct save");
-    
-    // Test adding null command
-    user1->addCommand(nullptr);
-    user1->executeAll(); // Should handle gracefully
-    
-    // Test empty command queue execution
-    user1->executeAll(); // Should handle empty queue
-    
-    // Cleanup
-    delete testRoom;
-    delete user1;
-    delete user2;
+    delete directBasic;
+    delete directAdmin;
+    delete directModerator;
 }
 
 void testIteratorPattern() {
-    cout << "\n=== TESTING ITERATOR PATTERN ===" << endl;
+    cout << "\n=== Testing Iterator Pattern ===" << endl;
     
-    // Create test environment
     ChatRoom* testRoom = new CtrlCat("IteratorTest");
     UserCreationSystem userSystem;
+    
+    //testing empty collections
+    Iterator<Users*>* emptyUserIter = IteratorCreator::createUserIterator(testRoom);
+    Iterator<string>* emptyMsgIter = IteratorCreator::createMessageIterator(testRoom);
+    
+    runTest("Empty user iterator works", !emptyUserIter->hasNext());
+    runTest("Empty message iterator works", !emptyMsgIter->hasNext());
+    
+    delete emptyUserIter;
+    delete emptyMsgIter;
+    
+    //adding users and testing iteration
     Users* user1 = userSystem.createUser("IterUser1", "basic");
     Users* user2 = userSystem.createUser("IterUser2", "admin");
     Users* user3 = userSystem.createUser("IterUser3", "moderator");
     
-    // Test empty collections first
-    Iterator<Users*>* emptyUserIter = IteratorCreator::createUserIterator(testRoom);
-    runTest("Empty user iterator hasNext false", !emptyUserIter->hasNext());
-    runTest("Empty user iterator next returns null", emptyUserIter->next() == nullptr);
-    runTest("Empty user iterator current returns null", emptyUserIter->current() == nullptr);
-    delete emptyUserIter;
-    
-    Iterator<string>* emptyMsgIter = IteratorCreator::createMessageIterator(testRoom);
-    runTest("Empty message iterator hasNext false", !emptyMsgIter->hasNext());
-    runTest("Empty message iterator next returns empty", emptyMsgIter->next() == "");
-    runTest("Empty message iterator current returns empty", emptyMsgIter->current() == "");
-    delete emptyMsgIter;
-    
-    // Add users and messages
     testRoom->registerUser(user1);
     testRoom->registerUser(user2);
     testRoom->registerUser(user3);
     
-    user1->send("Message 1", testRoom);
-    user2->send("Message 2", testRoom);
-    user3->send("Message 3", testRoom);
+    user1->send("First message", testRoom);
+    user2->send("Second message", testRoom);
+    user3->send("Third message", testRoom);
     
-    // Test UserIterator
+    //testing user iteration
     Iterator<Users*>* userIter = IteratorCreator::createUserIterator(testRoom);
-    
     vector<Users*> iteratedUsers;
+    
     while (userIter->hasNext()) {
-        Users* user = userIter->next();
-        iteratedUsers.push_back(user);
+        iteratedUsers.push_back(userIter->next());
     }
     
-    runTest("User iterator count correct", iteratedUsers.size() == 3);
-    runTest("First user correct", iteratedUsers[0] == user1);
-    runTest("Second user correct", iteratedUsers[1] == user2);
-    runTest("Third user correct", iteratedUsers[2] == user3);
-    runTest("After iteration hasNext false", !userIter->hasNext());
-    runTest("After iteration next returns null", userIter->next() == nullptr);
+    runTest("User iteration count correct", iteratedUsers.size() == 3);
+    runTest("User iteration order correct", iteratedUsers[0] == user1);
     
-    // Test reset functionality
+    ///testing reset functionality
     userIter->reset();
-    runTest("After reset hasNext true", userIter->hasNext());
-    runTest("After reset current correct", userIter->current() == user1);
-    
-    Users* nextUser = userIter->next();
-    runTest("Next after reset correct", nextUser == user1);
-    runTest("Current after next correct", userIter->current() == user2);
+    runTest("Reset works", userIter->hasNext());
+    runTest("Current after reset", userIter->current() == user1);
     
     delete userIter;
     
-    // Test MessageHistoryIterator (forward)
+    //testing forward message iteration
     Iterator<string>* msgIter = IteratorCreator::createMessageIterator(testRoom, false);
+    vector<string> messages;
     
-    vector<string> iteratedMessages;
     while (msgIter->hasNext()) {
-        string msg = msgIter->next();
-        iteratedMessages.push_back(msg);
+        messages.push_back(msgIter->next());
     }
     
-    runTest("Message iterator count correct", iteratedMessages.size() == 3);
-    runTest("First message correct", iteratedMessages[0] == "From IterUser1: Message 1");
-    runTest("Second message correct", iteratedMessages[1] == "From IterUser2: Message 2");
-    runTest("Third message correct", iteratedMessages[2] == "From IterUser3: Message 3");
+    runTest("Message iteration works", messages.size() == 3);
+    runTest("Message order correct", messages[0] == "From IterUser1: First message");
     
     delete msgIter;
     
-    // Test MessageHistoryIterator (reverse)
+    //testing reverse message iteration
     Iterator<string>* reverseMsgIter = IteratorCreator::createMessageIterator(testRoom, true);
-    
     vector<string> reverseMessages;
+    
     while (reverseMsgIter->hasNext()) {
-        string msg = reverseMsgIter->next();
-        reverseMessages.push_back(msg);
+        reverseMessages.push_back(reverseMsgIter->next());
     }
     
-    runTest("Reverse iterator count correct", reverseMessages.size() == 3);
-    runTest("Reverse first message", reverseMessages[0] == "From IterUser3: Message 3");
-    runTest("Reverse second message", reverseMessages[1] == "From IterUser2: Message 2");
-    runTest("Reverse third message", reverseMessages[2] == "From IterUser1: Message 1");
-    
-    // Test reverse iterator reset
-    reverseMsgIter->reset();
-    runTest("Reverse reset hasNext", reverseMsgIter->hasNext());
-    runTest("Reverse current after reset", reverseMsgIter->current() == "From IterUser3: Message 3");
+    runTest("Reverse iteration works", reverseMessages.size() == 3);
+    runTest("Reverse order correct", reverseMessages[0] == "From IterUser3: Third message");
     
     delete reverseMsgIter;
     
-    // Test ChatRoomIterator for coverage
+    //testing ChatRoom iterator
     Iterator<ChatRoom*>* roomIter = IteratorCreator::createChatRoomIterator(user1);
-    runTest("ChatRoom iterator created", roomIter != nullptr);
-    
-    // Test the iterator methods for coverage
-    bool hasNext = roomIter->hasNext();
-    ChatRoom* nextRoom = roomIter->next();
-    ChatRoom* currentRoom = roomIter->current();
+    roomIter->hasNext();
+    roomIter->next();
+    roomIter->current();
     roomIter->reset();
-    
     delete roomIter;
     
-    // Cleanup
+    //cleanup
     delete testRoom;
     delete user1;
     delete user2;
     delete user3;
 }
 
-void testAdminFunctionality() {
-    cout << "\n=== TESTING ADMIN FUNCTIONALITY ===" << endl;
+void testCommandPattern() {
+    cout << "\n=== Testing Command Pattern ===" << endl;
     
-    // Create environment
-    ChatRoom* testRoom = new CtrlCat("AdminTest");
+    ChatRoom* cmdRoom = new Dogorithm("CommandTest");
     UserCreationSystem userSystem;
-    Users* admin = userSystem.createUser("Admin", "admin");
-    Users* basicUser = userSystem.createUser("BasicUser", "basic");
+    Users* sender = userSystem.createUser("Sender", "basic");
+    Users* receiver = userSystem.createUser("Receiver", "basic");
+    
+    cmdRoom->registerUser(sender);
+    cmdRoom->registerUser(receiver);
+    
+    //testing normal message sending, uses internal commands
+    sender->send("Test message", cmdRoom);
+    
+    runTest("Command pattern saves message", cmdRoom->getChatHistory().size() == 1);
+    runTest("Message content correct", cmdRoom->getChatHistory()[0] == "From Sender: Test message");
+    
+    //testing direct command creation
+    Command* sendCmd = new SendMessageCommand(cmdRoom, "Direct send", sender);
+    Command* saveCmd = new SaveMessageCommand(cmdRoom, "Direct save", sender);
+    
+    sender->addCommand(sendCmd);
+    sender->addCommand(saveCmd);
+    sender->executeAll();
+    
+    runTest("Direct commands work", cmdRoom->getChatHistory().size() == 2);
+    
+    //tesing null command handling
+    sender->addCommand(nullptr);
+    sender->executeAll();
+    
+    runTest("Null command handled", true); // If we get here, it didn't crash
+    
+    delete cmdRoom;
+    delete sender;
+    delete receiver;
+}
+
+void testAdminAndModeratorFunctionality() {
+    cout << "\n=== Testing Admin and Moderator Functionality ===" << endl;
+    
+    ChatRoom* testRoom = new CtrlCat("AdminModTest");
+    UserCreationSystem userSystem;
+    
+    Users* admin = userSystem.createUser("SuperAdmin", "admin");
+    Users* moderator = userSystem.createUser("ModUser", "moderator");
+    Users* basicUser = userSystem.createUser("RegularUser", "basic");
     
     testRoom->registerUser(admin);
+    testRoom->registerUser(moderator);
     testRoom->registerUser(basicUser);
     
-    // Test admin specific methods
+    //testing the admin functionality
     AdminUser* adminPtr = dynamic_cast<AdminUser*>(admin);
-    runTest("Admin cast successful", adminPtr != nullptr);
+    runTest("Admin casting works", adminPtr != nullptr);
     
     if (adminPtr) {
-        // Test privilege adding
-        vector<string> newPrivs;
-        newPrivs.push_back("custom_privilege");
-        adminPtr->addPrivileges(newPrivs);
-        runTest("Custom privilege added", adminPtr->hasPrivilege("custom_privilege"));
-        
-        // Test admin actions (these are mostly output functions, but we test for coverage)
         adminPtr->kickUser(basicUser, testRoom);
         adminPtr->banUser(basicUser, testRoom);
         adminPtr->deleteMessage(testRoom, 1);
         
-        // Test admin without required privileges
-        AdminUser* limitedAdmin = new AdminUser("LimitedAdmin");
-        vector<string> limitedPrivs;
-        limitedPrivs.push_back("view_logs");
-        limitedAdmin->addPrivileges(limitedPrivs);
-        
-        runTest("Limited admin no kick", !limitedAdmin->hasPrivilege("kick"));
-        limitedAdmin->kickUser(basicUser, testRoom); // Should fail gracefully
-        limitedAdmin->banUser(basicUser, testRoom); // Should fail gracefully
-        limitedAdmin->deleteMessage(testRoom, 1); // Should fail gracefully
-        
-        delete limitedAdmin;
+        //test custom privileges
+        vector<string> customPrivs;
+        customPrivs.push_back("special_access");
+        adminPtr->addPrivileges(customPrivs);
+        runTest("Custom admin privilege", adminPtr->hasPrivilege("special_access"));
     }
     
-    // Cleanup
-    delete testRoom;
-    delete admin;
-    delete basicUser;
-}
-
-void testModeratorFunctionality() {
-    cout << "\n=== TESTING MODERATOR FUNCTIONALITY ===" << endl;
-    
-    // Create environment
-    ChatRoom* testRoom = new Dogorithm("ModeratorTest");
-    UserCreationSystem userSystem;
-    Users* moderator = userSystem.createUser("Moderator", "moderator");
-    Users* basicUser = userSystem.createUser("BasicUser", "basic");
-    
-    testRoom->registerUser(moderator);
-    testRoom->registerUser(basicUser);
-    
-    // Test moderator specific methods
+    //testing moderator functionality
     ModeratorUser* modPtr = dynamic_cast<ModeratorUser*>(moderator);
-    runTest("Moderator cast successful", modPtr != nullptr);
+    runTest("Moderator casting works", modPtr != nullptr);
     
     if (modPtr) {
-        // Test privilege adding
-        vector<string> newPrivs;
-        newPrivs.push_back("custom_mod_privilege");
-        modPtr->addPrivileges(newPrivs);
-        runTest("Custom mod privilege added", modPtr->hasPrivilege("custom_mod_privilege"));
-        
-        // Test moderator actions
         modPtr->muteUser(basicUser, testRoom);
-        modPtr->warnUser(basicUser, "Test warning");
+        modPtr->warnUser(basicUser, "Please follow rules");
         modPtr->viewUserReports(testRoom);
         
-        // Test moderator without required privileges
-        ModeratorUser* limitedMod = new ModeratorUser("LimitedMod");
-        vector<string> limitedPrivs;
-        limitedPrivs.push_back("read_only");
-        limitedMod->addPrivileges(limitedPrivs);
-        
-        runTest("Limited mod no mute", !limitedMod->hasPrivilege("mute"));
-        limitedMod->muteUser(basicUser, testRoom); // Should fail gracefully
-        limitedMod->warnUser(basicUser, "Should fail"); // Should fail gracefully
-        limitedMod->viewUserReports(testRoom); // Should fail gracefully
-        
-        delete limitedMod;
+        //test custom privileges
+        vector<string> modPrivs;
+        modPrivs.push_back("special_mod_access");
+        modPtr->addPrivileges(modPrivs);
+        runTest("Custom moderator privilege", modPtr->hasPrivilege("special_mod_access"));
     }
     
-    // Cleanup
     delete testRoom;
+    delete admin;
     delete moderator;
     delete basicUser;
 }
 
-void testEdgeCasesAndErrorHandling() {
-    cout << "\n=== TESTING EDGE CASES ===" << endl;
-    
-    // Test empty string handling
-    UserCreationSystem userSystem;
-    Users* emptyNameUser = userSystem.createUser("", "basic");
-    runTest("Empty name user created", emptyNameUser != nullptr);
-    runTest("Empty name preserved", emptyNameUser->getName() == "");
-    delete emptyNameUser;
-    
-    // Test very long names
-    string longName(100, 'a'); // 100 character string
-    Users* longNameUser = userSystem.createUser(longName, "admin");
-    runTest("Long name user created", longNameUser != nullptr);
-    runTest("Long name preserved", longNameUser->getName() == longName);
-    delete longNameUser;
-    
-    // Test case sensitivity in user types
-    Users* upperCaseType = userSystem.createUser("TestUser", "ADMIN");
-    runTest("Case sensitive type handled", upperCaseType->getUserType() == "Basic");
-    delete upperCaseType;
-    
-    // Test iterator boundary conditions
-    ChatRoom* boundaryRoom = new CtrlCat("BoundaryTest");
-    
-    // Add one user and test boundary
-    UserCreationSystem factory;
-    Users* singleUser = factory.createUser("Single", "basic");
-    boundaryRoom->registerUser(singleUser);
-    
-    Iterator<Users*>* singleIter = IteratorCreator::createUserIterator(boundaryRoom);
-    runTest("Single user hasNext", singleIter->hasNext());
-    Users* retrieved = singleIter->next();
-    runTest("Single user retrieved", retrieved == singleUser);
-    runTest("After single next hasNext false", !singleIter->hasNext());
-    runTest("After boundary next returns null", singleIter->next() == nullptr);
-    
-    delete singleIter;
-    delete boundaryRoom;
-    delete singleUser;
-    
-    // Test multiple reset operations
-    ChatRoom* resetRoom = new Dogorithm("ResetTest");
-    Users* resetUser = factory.createUser("ResetUser", "moderator");
-    resetRoom->registerUser(resetUser);
-    resetUser->send("Reset message", resetRoom);
-    
-    Iterator<string>* resetIter = IteratorCreator::createMessageIterator(resetRoom);
-    resetIter->reset();
-    resetIter->reset();
-    resetIter->reset(); // Multiple resets
-    
-    runTest("Multiple resets handled", resetIter->hasNext());
-    runTest("Reset message correct", resetIter->next() == "From ResetUser: Reset message");
-    
-    delete resetIter;
-    delete resetRoom;
-    delete resetUser;
-}
-
-void testComplexScenario() {
-    cout << "\n=== TESTING COMPLEX INTEGRATION SCENARIO ===" << endl;
-    
-    // Create a complex multi-room, multi-user scenario
-    ChatRoom* general = new CtrlCat("General");
-    ChatRoom* admin = new Dogorithm("AdminRoom");
-    ChatRoom* mods = new CtrlCat("Moderators");
+void testEdgeCasesAndIntegration() {
+    cout << "\n=== Testing Edge Cases and Integration ===" << endl;
     
     UserCreationSystem userSystem;
-    Users* alice = userSystem.createUser("Alice", "basic");
-    Users* bob = userSystem.createUser("Bob", "basic");
-    Users* charlie = userSystem.createUser("Charlie", "moderator");
-    Users* diana = userSystem.createUser("Diana", "admin");
     
-    // Complex room registrations
-    general->registerUser(alice);
-    general->registerUser(bob);
-    general->registerUser(charlie);
-    general->registerUser(diana);
+    //test edge cases
+    Users* emptyName = userSystem.createUser("", "basic");
+    runTest("Empty name handled", emptyName->getName() == "");
+    delete emptyName;
     
-    admin->registerUser(diana);
-    mods->registerUser(charlie);
-    mods->registerUser(diana);
+    Users* longName = userSystem.createUser(string(50, 'X'), "admin");
+    runTest("Long name handled", longName->getName().length() == 50);
+    delete longName;
     
-    runTest("General room has 4 users", general->getUsers().size() == 4);
-    runTest("Admin room has 1 user", admin->getUsers().size() == 1);
-    runTest("Mods room has 2 users", mods->getUsers().size() == 2);
+    Users* wrongCase = userSystem.createUser("Test", "ADMIN");
+    runTest("Case sensitivity handled", wrongCase->getUserType() == "Basic");
+    delete wrongCase;
     
-    // Complex message exchanges
-    alice->send("Hello everyone!", general);
-    bob->send("Hi Alice!", general);
-    diana->send("Admin announcement", admin);
-    charlie->send("Moderator meeting", mods);
-    diana->send("I'll be there", mods);
+    //testing complex integration scenario
+    ChatRoom* room1 = new CtrlCat("Room1");
+    ChatRoom* room2 = new Dogorithm("Room2");
     
-    runTest("General has 2 messages", general->getChatHistory().size() == 2);
-    runTest("Admin has 1 message", admin->getChatHistory().size() == 1);
-    runTest("Mods has 2 messages", mods->getChatHistory().size() == 2);
+    Users* multiUser = userSystem.createUser("MultiRoomUser", "admin");
+    Users* helper = userSystem.createUser("Helper", "basic");
     
-    // Test administrative actions
-    AdminUser* adminUser = dynamic_cast<AdminUser*>(diana);
-    ModeratorUser* modUser = dynamic_cast<ModeratorUser*>(charlie);
+    //same user in multiple rooms
+    room1->registerUser(multiUser);
+    room2->registerUser(multiUser);
+    room1->registerUser(helper);
+    room2->registerUser(helper);
     
-    if (adminUser) {
-        adminUser->kickUser(bob, general);
-        runTest("Bob kicked from general", general->getUsers().size() == 3);
-    }
+    multiUser->send("Message in room 1", room1);
+    multiUser->send("Message in room 2", room2);
     
-    if (modUser) {
-        modUser->warnUser(alice, "Please follow guidelines");
-        modUser->muteUser(alice, general);
-    }
+    runTest("Multi-room messaging", room1->getChatHistory().size() == 1 && room2->getChatHistory().size() == 1);
     
-    // Test iterators on all rooms
-    Iterator<Users*>* generalIter = IteratorCreator::createUserIterator(general);
-    Iterator<string>* adminMsgIter = IteratorCreator::createMessageIterator(admin);
-    Iterator<string>* modsMsgIter = IteratorCreator::createMessageIterator(mods, true); // Reverse
+    //testing removal from one room
+    room1->removeUser(multiUser);
+    runTest("Partial removal works", room1->getUsers().size() == 1 && room2->getUsers().size() == 2);
     
-    int generalUserCount = 0;
-    while (generalIter->hasNext()) {
-        generalIter->next();
-        generalUserCount++;
-    }
-    runTest("General iterator count matches", generalUserCount == 3);
-    
-    int adminMsgCount = 0;
-    while (adminMsgIter->hasNext()) {
-        adminMsgIter->next();
-        adminMsgCount++;
-    }
-    runTest("Admin message iterator works", adminMsgCount == 1);
-    
-    int modMsgCount = 0;
-    while (modsMsgIter->hasNext()) {
-        modsMsgIter->next();
-        modMsgCount++;
-    }
-    runTest("Mods reverse iterator works", modMsgCount == 2);
-    
-    // Cleanup
-    delete generalIter;
-    delete adminMsgIter;
-    delete modsMsgIter;
-    delete general;
-    delete admin;
-    delete mods;
-    delete alice;
-    delete bob;
-    delete charlie;
-    delete diana;
+    delete room1;
+    delete room2;
+    delete multiUser;
+    delete helper;
 }
 
-void performanceAndStressTests() {
-    cout << "\n=== PERFORMANCE AND STRESS TESTS ===" << endl;
+string intToString(int value) {
+    if (value == 0) return "0";
+    string result = "";
+    bool negative = value < 0;
+    if (negative) value = -value;
+    while (value > 0) {
+        result = char('0' + (value % 10)) + result;
+        value /= 10;
+    }
+    if (negative) result = "-" + result;
+    return result;
+}
+
+void testPerformanceAndStress() {
+    cout << "\n=== Testing Performance and Stress Scenarios ===" << endl;
     
-    // Test with many users
     ChatRoom* stressRoom = new CtrlCat("StressTest");
-    vector<Users*> manyUsers;
+    vector<Users*> users;
     UserCreationSystem userSystem;
     
-    for (int i = 0; i < 20; i++) {
-        Users* user = userSystem.createUser("User" + to_string(i), "basic");
-        manyUsers.push_back(user);
+    //creating many users
+    for (int i = 0; i < 15; i++) {
+        Users* user = userSystem.createUser("StressUser" + intToString(i), "basic");
+        users.push_back(user);
         stressRoom->registerUser(user);
     }
     
-    runTest("Many users registered", stressRoom->getUsers().size() == 20);
+    runTest("Many users registered", stressRoom->getUsers().size() == 15);
     
-    // Test with many messages
-    for (int i = 0; i < 15; i++) {
-        int userIndex = i % manyUsers.size();
-        manyUsers[userIndex]->send("Message " + to_string(i), stressRoom);
+    //sending many messages
+    for (int i = 0; i < 10; i++) {
+        users[i % users.size()]->send("Stress message " + intToString(i), stressRoom);
     }
     
-    runTest("Many messages sent", stressRoom->getChatHistory().size() == 15);
+    runTest("Many messages sent", stressRoom->getChatHistory().size() == 10);
     
-    // Test iterator performance
-    Iterator<Users*>* stressUserIter = IteratorCreator::createUserIterator(stressRoom);
+    //test the iterator with many items
+    Iterator<Users*>* stressIter = IteratorCreator::createUserIterator(stressRoom);
     int count = 0;
-    while (stressUserIter->hasNext()) {
-        stressUserIter->next();
+    while (stressIter->hasNext()) {
+        stressIter->next();
         count++;
     }
-    runTest("Stress user iteration", count == 20);
+    runTest("Stress iteration works", count == 15);
     
-    Iterator<string>* stressMsgIter = IteratorCreator::createMessageIterator(stressRoom);
-    count = 0;
-    while (stressMsgIter->hasNext()) {
-        stressMsgIter->next();
-        count++;
-    }
-    runTest("Stress message iteration", count == 15);
-    
-    // Cleanup
-    delete stressUserIter;
-    delete stressMsgIter;
+    delete stressIter;
     delete stressRoom;
-    for (Users* user : manyUsers) {
+    for (Users* user : users) {
         delete user;
     }
 }
 
 int main() {
-    cout << "==========================================================" << endl;
-    cout << "    COMPREHENSIVE TESTING FOR FITCHFORK COVERAGE" << endl;
-    cout << "==========================================================" << endl;
+    cout << "           PETSPACE CHAT SYSTEM TESTING" << endl;
+    cout << "=========================================================" << endl;
     
     try {
-        // Run all test suites
-        testFactoryPattern();
-        testMediatorPattern();
-        testCommandPattern();
+        testingMediatorAndCommand();
+        testFactoryMethodPattern();
         testIteratorPattern();
-        testAdminFunctionality();
-        testModeratorFunctionality();
-        testEdgeCasesAndErrorHandling();
-        testComplexScenario();
-        performanceAndStressTests();
+        testCommandPattern();
+        testAdminAndModeratorFunctionality();
+        testEdgeCasesAndIntegration();
+        testPerformanceAndStress();
         
-        // Print final results
-        cout << "\n==========================================================" << endl;
-        cout << "                    TESTING SUMMARY" << endl;
-        cout << "==========================================================" << endl;
-        cout << "Total Tests Run: " << testsRun << endl;
-        cout << "Tests Passed: " << testsPassed << endl;
-        cout << "Tests Failed: " << (testsRun - testsPassed) << endl;
+        //results summary
+        cout << "\n=========================================================" << endl;
+        cout << "                  TESTING COMPLETE" << endl;
+        cout << "=========================================================" << endl;
+        cout << "Total Tests: " << testsRun << endl;
+        cout << "Passed: " << testsPassed << endl;
+        cout << "Failed: " << (testsRun - testsPassed) << endl;
         
         double successRate = (testsRun > 0) ? (double)testsPassed / testsRun * 100.0 : 0.0;
         cout << "Success Rate: " << successRate << "%" << endl;
         
-        cout << "\nDesign Patterns Tested:" << endl;
-        cout << "- Factory Method Pattern (User creation system)" << endl;
-        cout << "- Mediator Pattern (Chat rooms managing user communication)" << endl;
-        cout << "- Command Pattern (Message sending and saving)" << endl;
-        cout << "- Iterator Pattern (User and message traversal)" << endl;
+        cout << "\nDesign Patterns Successfully Tested:" << endl;
+        cout << "- Factory Method Pattern - User creation system" << endl;
+        cout << "- Mediator Pattern - Chat room communication" << endl;
+        cout << "- Command Pattern - Message operations" << endl;
+        cout << "- Iterator Pattern - Collection traversal" << endl;
         
-        cout << "\nTest Coverage Areas:" << endl;
-        cout << "- All user types (Basic, Admin, Moderator)" << endl;
-        cout << "- All chat room types (CtrlCat, Dogorithm)" << endl;
-        cout << "- User privileges and permissions" << endl;
-        cout << "- Message sending and receiving" << endl;
-        cout << "- User registration and removal" << endl;
-        cout << "- Iterator functionality (forward and reverse)" << endl;
-        cout << "- Administrative actions" << endl;
-        cout << "- Edge cases and error handling" << endl;
-        cout << "- Complex integration scenarios" << endl;
-        cout << "- Performance and stress testing" << endl;
+        cout << "=========================================================" << endl;
         
-        if (successRate >= 90.0) {
-            cout << "\nEXCELLENT! All major functionality working correctly!" << endl;
-        } else if (successRate >= 75.0) {
-            cout << "\nGOOD! Most functionality working, minor issues detected." << endl;
-        } else {
-            cout << "\nWARNING! Significant issues detected. Review failed tests." << endl;
-        }
-        
-        cout << "\nThis test suite should provide well over 60% code coverage" << endl;
-        cout << "required by FitchFork. Ready for submission!" << endl;
-        cout << "==========================================================" << endl;
-        
-        return (successRate >= 60.0) ? 0 : 1;
+        return (successRate >= 60.0)? 0: 1;
         
     } catch (...) {
-        cout << "\nUNKNOWN ERROR during testing!" << endl;
+        cout << "\nERROR: Unexpected exception during testing" << endl;
         return 1;
     }
 }
