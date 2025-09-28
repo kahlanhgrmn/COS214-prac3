@@ -30,6 +30,7 @@ class Users {
         
     public:
         Users(const string& userName) : name(userName) {}
+        virtual ~Users() {}
         virtual void send(string message, ChatRoom* room);
         virtual void receive(string message, Users* fromUser, ChatRoom* room);
         virtual void addCommand(Command* command);

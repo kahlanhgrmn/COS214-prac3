@@ -13,17 +13,20 @@
 
 class Name1 : public Users {
 public:
-    Name1() : Users("Alice") {}
+    Name1(string n) : Users(n) {}
+    ~Name1() {}
 };
 
 class Name2 : public Users {
 public:
-    Name2() : Users("Bob") {}
+    Name2(string n) : Users(n) {}
+    ~Name2() {}
 };
 
 class Name3 : public Users {
 public:
-    Name3() : Users("Charlie") {}
+    Name3(string n) : Users(n) {}
+    ~Name3() {}
 };
 
 

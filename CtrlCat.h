@@ -22,11 +22,16 @@
 
 class CtrlCat : public ChatRoom {
     public:
+        CtrlCat(string n) : ChatRoom(n) {}
         virtual ~CtrlCat();
         virtual void registerUser(Users* user);
         virtual void sendMessage(string message, Users* fromUser);
         virtual void saveMessage(string message, Users* fromUser);
         virtual void removeUser(Users* user);
+
+        //additional
+        virtual void printChatRoomHistory() const;
+        virtual void getUserList() const;
 
 };
 

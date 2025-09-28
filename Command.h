@@ -28,7 +28,7 @@ class Command {
 
     public:
         Command(ChatRoom* c, string m, Users* u) : chatRoom(c), message(m), fromUser(u) {}
-        ~Command () {}
+        virtual ~Command () {}
         virtual void execute() = 0; //abstract and will be implemented in the concreteclass and knows which receiver to call
 
 

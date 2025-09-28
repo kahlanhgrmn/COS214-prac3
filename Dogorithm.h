@@ -23,11 +23,16 @@
 
 class Dogorithm : public ChatRoom {
     public:
+        Dogorithm(string n) : ChatRoom(n) {}
         virtual ~Dogorithm();
         void registerUser(Users* user);
         void sendMessage(string message, Users* fromUser);
         void saveMessage(string message, Users* fromUser);
         void removeUser(Users* user);
+
+        //additional 
+        virtual void printChatRoomHistory() const;
+        virtual void getUserList() const;
 };
 
 #endif
