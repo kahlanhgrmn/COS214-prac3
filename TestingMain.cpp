@@ -22,9 +22,19 @@
 
 using namespace std;
 
+/// @brief Global counter for total number of tests executed
 int testsRun = 0;
+/// @brief Global counter for number of tests that passed
 int testsPassed = 0;
 
+/**
+ * @brief Executes a single test and tracks results
+ * @param testName Descriptive name of the test being run
+ * @param condition Boolean result of the test condition
+ * 
+ * Increments test counters and prints pass/fail status.
+ * Updates global test statistics for final reporting.
+ */
 void runTest(const string& testName, bool condition) {
     testsRun++;
     if (condition) {
@@ -35,6 +45,14 @@ void runTest(const string& testName, bool condition) {
     }
 }
 
+/**
+ * @brief Tests the original mediator and command patterns
+ * 
+ * Comprehensive test of chat room communication, user management,
+ * and message handling using the factory-created users.
+ * Tests user registration, message sending, user removal,
+ * and multi-room functionality.
+ */
 void testingMediatorAndCommand() {
     cout << "=================== Testing Mediator and Command ==================== " << endl;
 
@@ -176,6 +194,13 @@ void testingMediatorAndCommand() {
 
 }
 
+/**
+ * @brief Tests the Factory Method pattern implementation
+ * 
+ * Verifies user creation through factories, privilege assignment,
+ * and proper handling of invalid user types. Tests both the
+ * UserCreationSystem and direct factory usage.
+ */
 void testFactoryMethodPattern() {
     cout << "\n=== Testing Factory Method Pattern ===" << endl;
     
@@ -226,6 +251,13 @@ void testFactoryMethodPattern() {
     delete directModerator;
 }
 
+/**
+ * @brief Tests the Iterator pattern implementation
+ * 
+ * Verifies user and message iteration, forward/reverse traversal,
+ * reset functionality, and empty collection handling.
+ * Tests UserIterator, MessageHistoryIterator, and ChatRoomIterator.
+ */
 void testIteratorPattern() {
     cout << "\n=== Testing Iterator Pattern ===" << endl;
     
@@ -314,6 +346,13 @@ void testIteratorPattern() {
     delete user3;
 }
 
+/**
+ * @brief Tests the Command pattern implementation
+ * 
+ * Verifies message sending through command objects,
+ * direct command creation, and null command handling.
+ * Tests SendMessageCommand and SaveMessageCommand functionality.
+ */
 void testCommandPattern() {
     cout << "\n=== Testing Command Pattern ===" << endl;
     
@@ -352,6 +391,13 @@ void testCommandPattern() {
     delete receiver;
 }
 
+/**
+ * @brief Tests admin and moderator user functionality
+ * 
+ * Verifies administrative actions like kick, ban, mute, warn,
+ * and privilege management. Tests both default and custom
+ * privilege assignment.
+ */
 void testAdminAndModeratorFunctionality() {
     cout << "\n=== Testing Admin and Moderator Functionality ===" << endl;
     
@@ -404,6 +450,13 @@ void testAdminAndModeratorFunctionality() {
     delete basicUser;
 }
 
+/**
+ * @brief Tests edge cases and integration scenarios
+ * 
+ * Verifies handling of empty names, long names, case sensitivity,
+ * multi-room user membership, and complex user interactions.
+ * Tests system robustness and integration between patterns.
+ */
 void testEdgeCasesAndIntegration() {
     cout << "\n=== Testing Edge Cases and Integration ===" << endl;
     
@@ -450,6 +503,14 @@ void testEdgeCasesAndIntegration() {
     delete helper;
 }
 
+/**
+ * @brief Converts integer to string without using to_string
+ * @param value Integer value to convert
+ * @return String representation of the integer
+ * 
+ * Custom implementation to avoid dependency on to_string function.
+ * Handles negative numbers and zero correctly.
+ */
 string intToString(int value) {
     if (value == 0) return "0";
     string result = "";
@@ -463,6 +524,14 @@ string intToString(int value) {
     return result;
 }
 
+/**
+ * @brief Converts integer to string without using to_string
+ * @param value Integer value to convert
+ * @return String representation of the integer
+ * 
+ * Custom implementation to avoid dependency on to_string function.
+ * Handles negative numbers and zero correctly.
+ */
 void testPerformanceAndStress() {
     cout << "\n=== Testing Performance and Stress Scenarios ===" << endl;
     
@@ -502,6 +571,15 @@ void testPerformanceAndStress() {
     }
 }
 
+/**
+ * @brief Main testing function for the PetSpace chat system
+ * @return 0 if successful, 1 if significant errors occurred
+ * 
+ * Executes comprehensive tests of all design patterns:
+ * Factory Method, Mediator, Command, and Iterator patterns.
+ * Provides detailed test results and success metrics.
+ * Tests are run in order from basic functionality to complex integration.
+ */
 int main() {
     cout << "           PETSPACE CHAT SYSTEM TESTING" << endl;
     cout << "=========================================================" << endl;
