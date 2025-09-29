@@ -45,7 +45,6 @@ COMMON_SOURCES = CtrlCat.cpp \
           ChatRoomIterator.cpp \
           IteratorCreator.cpp
 
-MAIN_SOURCE = DemoMain.cpp
 TEST_MAIN_SOURCE = TestingMain.cpp
 
 # Object files
@@ -72,10 +71,6 @@ $(TEST_TARGET): $(COMMON_OBJECTS) $(TEST_MAIN_OBJECT)
 run: $(TEST_TARGET)
 	./$(TEST_TARGET)
 
-# Run demo program
-demo: $(TARGET)
-	./$(TARGET)
-
 # Run memory check with Valgrind
 valgrind: $(TEST_TARGET)
 	valgrind --leak-check=full --show-leak-kinds=all --track-origins=yes ./$(TEST_TARGET)
@@ -92,8 +87,15 @@ coverage: clean
 	@echo ""
 	@echo "To view detailed coverage for a specific file, use: less <filename>.cpp.gcov"
 
+
+# Target to generate Doxygen documentation
+dox:
+	doxygen Doxyfile
+
 # Clean up
 clean:
 	rm -f *.o *.gcda *.gcno *.gcov $(TARGET) $(TEST_TARGET)
+	rm -rf docs
+
 
 .PHONY: all run demo coverage clean valgrind
