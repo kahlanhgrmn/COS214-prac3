@@ -28,11 +28,9 @@ TEST_TARGET = test_petspace
 #           SendMessageCommand.cpp \
 #           SaveMessageCommand.cpp
 
-COMMON_SOURCES = ChatRoom.cpp \
-          CtrlCat.cpp \
+COMMON_SOURCES = CtrlCat.cpp \
           Dogorithm.cpp \
           Users.cpp \
-          Command.cpp \
           SendMessageCommand.cpp \
           SaveMessageCommand.cpp \
           BasicUser.cpp \

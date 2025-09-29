@@ -19,8 +19,8 @@ using namespace std;
  * @class ChatRoom
  * @brief Represents a chat room where users can send and receive messages.
  *
- * The ChatRoom class stores connected users and allows them
- * to broadcast or receive messages.
+ * The ChatRoom class is a mediator and allows users to talk to each other through the mediator. 
+ * Stores users and allows them to broadcast or receive messages.
  */
 
 class ChatRoom {

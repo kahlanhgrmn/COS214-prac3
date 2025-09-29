@@ -1,6 +1,6 @@
 /**
  * @file Users.cpp
- * @brief Implements the Users class for managing user actions.
+ * @brief Implements the Users class chatroom participants.
  * @author Gabriela
  * @date 2025-09-16
  */
@@ -40,6 +40,11 @@
     cout << "[" << room->getChatRoomName() << "] " << name << " received from " << fromUser->getName() << " : " << message << endl;
  }
 
+
+/**
+* @brief Adds a command to the user's command queue.
+* @param command Pointer to the command to be added.
+*/
  void Users::addCommand(Command* command)
  {
    if (command == nullptr) {
@@ -48,6 +53,10 @@
    commandQueue.push_back(command);
  }
 
+
+/**
+* @brief Executes all commands in the command queue sequentially.
+*/
  void Users::executeAll()
  {
    for (Command* cmd : commandQueue) {

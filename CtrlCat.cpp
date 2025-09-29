@@ -1,6 +1,6 @@
 /**
  * @file CtrlCat.cpp
- * @brief Implements the CtrlCat class for managing user messages.
+ * @brief Implements the CtrlCat concrete chatroom class
  * @author Gabriela
  * @date 2025-09-16
  */
@@ -17,8 +17,8 @@
 }
 
 
-/// @brief 
-/// @param user is the user that needs to be registered in the ctrlcat chatroom.
+/// @brief Registers a user to the CtrlCat chat room.
+/// @param user is a pointer to the user that needs to be registered in the ctrlcat chatroom.
 void CtrlCat::registerUser(Users* user) {
     if (user == nullptr) {
         return;
@@ -33,7 +33,6 @@ void CtrlCat::registerUser(Users* user) {
 
 
 /// @brief Mediators sendMessage method. Called in User's send() method.
-///        Saves the message to the chat room's message history.
 ///        Iterates through the users list of the specific chat room and calls the user's receive method on each user beside the user that sent the massage
 /// @param message is the message that was sent by a user
 /// @param fromUser is the user that sent the message
@@ -46,11 +45,22 @@ void CtrlCat::sendMessage(string message, Users* fromUser)
     }
 }
 
+
+ /**
+ * @brief Saves a message to the chat room's history.
+ * @param message The message to be saved.
+ * @param fromUser Pointer to the user who sent the message.
+ */
 void CtrlCat::saveMessage(string message, Users *fromUser)
 {
     chatHistory.push_back("From " + fromUser->getName() + ": " + message);
 }
 
+
+/**
+ * @brief Removes a user from the CtrlCat chat room.
+ * @param user Pointer to the user to be removed.
+ */
 void CtrlCat::removeUser(Users *user)
 {
     if (user == nullptr) {
@@ -69,6 +79,10 @@ void CtrlCat::removeUser(Users *user)
     }
 }
 
+
+/**
+ * @brief Prints the complete chat history of the room.
+ */
 void CtrlCat::printChatRoomHistory() const
 {
     cout << "\n=== CtrlCat Chat History ===" << endl;
@@ -83,6 +97,10 @@ void CtrlCat::printChatRoomHistory() const
 
 }
 
+
+/**
+ * @brief Prints the list of all users currently in the room.
+ */
 void CtrlCat::getUserList() const
 {
     cout << "\n=== CtrlCat Users ===" << endl;

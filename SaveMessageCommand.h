@@ -1,6 +1,6 @@
 /**
  * @file SaveMessageCommand.h
- * @brief Declares the SaveMessageCommand class for ...
+ * @brief Declares the SaveMessageCommand class for storing messages in chat history.
  * @author Gabriela
  * @date 2025-09-16
  */
@@ -16,9 +16,11 @@ using namespace std;
 
 /**
  * @class SaveMessageCommand
- * @brief Represents a Command 
+ * @brief A concrete command that saves messages to all chat room's history.
  *
- *
+ * SaveMessageCommand encapsulates the action of persisting a message to the chat
+ * room's history for later retrieval.
+ * Delegates the actual saving to the ChatRoom (receiver).
  */
 class SaveMessageCommand : public Command {
     //Has these variables inherited

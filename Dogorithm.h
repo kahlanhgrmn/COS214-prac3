@@ -1,6 +1,6 @@
 /**
  * @file Dogorithm.h
- * @brief Declares the Dogorithm class for managing user messages.
+ * @brief Declares the Dogorithm concrete chat room class.
  * @author Gabriela
  * @date 2025-09-25
  */
@@ -23,7 +23,12 @@
 
 class Dogorithm : public ChatRoom {
     public:
+
+        /**
+         * @brief Constructs a Dogorithm chat room.
+         */
         Dogorithm(string n) : ChatRoom(n) {}
+        
         virtual ~Dogorithm();
         void registerUser(Users* user);
         void sendMessage(string message, Users* fromUser);

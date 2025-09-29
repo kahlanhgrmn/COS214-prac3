@@ -1,6 +1,6 @@
 /**
  * @file SendMessageCommand.h
- * @brief Declares the SendMessageCommand class for ...
+ * @brief Declares the SendMessageCommand class for delivering messages to chat room users.
  * @author Gabriela
  * @date 2025-09-16
  */
@@ -15,10 +15,12 @@
 using namespace std;
 
 /**
- * @class Command
- * @brief Represents a ConcreteCommand 
- *        Implements the execute() and knows which receiver to call
+ * @class SendMessageCommand
+ * @brief A concrete command that sends messages to all users in a chat room.
  *
+ * SendMessageCommand encapsulates the action of sending a message from one user
+ * to all other users in a chat room. 
+ * Delegates the actual message delivery to the ChatRoom (receiver).
  */
 class SendMessageCommand : public Command {
     //Has these variables inherited

@@ -1,6 +1,6 @@
 /**
  * @file CtrlCat.h
- * @brief Declares the CtrlCat class for managing user messages.
+ * @brief Declares the CtrlCat concrete chat room class.
  * @author Gabriela
  * @date 2025-09-16
  */
@@ -14,14 +14,18 @@
 
  /**
  * @class CtrlCat
- * @brief Represents a chat room where users can send and receive messages.
+ * @brief A concrete chat room implementation where users that like cats can send and receive messages
  *
- * The CtrlCat class stores connected users and allows them
- * to broadcast or receive messages.
+ * CtrlCat is a concrete mediator that manages communication between users
+ * interested in cat-related topics and technology. It handles user registration,
+ * message broadcasting, and chat history management.
  */
 
 class CtrlCat : public ChatRoom {
     public:
+        /**
+         * @brief Constructs a CtrlCat chat room.
+         */
         CtrlCat(string n) : ChatRoom(n) {}
         virtual ~CtrlCat();
         virtual void registerUser(Users* user);
