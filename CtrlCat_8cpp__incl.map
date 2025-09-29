@@ -1,0 +1,26 @@
+<map id="CtrlCat.cpp" name="CtrlCat.cpp">
+<area shape="rect" id="Node000001" title="Implements the CtrlCat concrete chatroom class." alt="" coords="223,5,317,31"/>
+<area shape="rect" id="Node000002" href="$CtrlCat_8h.html" title="Declares the CtrlCat concrete chat room class." alt="" coords="5,152,84,177"/>
+<area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="253,33,76,147,73,142,251,29"/>
+<area shape="rect" id="Node000006" href="$Users_8h.html" title="Declares the Users class for chat room participants." alt="" coords="235,79,305,104"/>
+<area shape="poly" id="edge6_Node000001_Node000006" title=" " alt="" coords="273,31,273,65,267,65,267,31"/>
+<area shape="rect" id="Node000009" title=" " alt="" coords="330,79,410,104"/>
+<area shape="poly" id="edge15_Node000001_Node000009" title=" " alt="" coords="288,29,344,68,341,73,285,33"/>
+<area shape="rect" id="Node000003" href="$ChatRoom_8h.html" title="Declares the ChatRoom class for managing user messages." alt="" coords="204,225,307,251"/>
+<area shape="poly" id="edge2_Node000002_Node000003" title=" " alt="" coords="79,175,209,218,208,223,78,180"/>
+<area shape="rect" id="Node000004" title=" " alt="" coords="109,299,172,324"/>
+<area shape="poly" id="edge5_Node000002_Node000004" title=" " alt="" coords="54,176,99,249,126,286,121,289,94,252,49,179"/>
+<area shape="poly" id="edge3_Node000003_Node000004" title=" " alt="" coords="238,253,172,294,170,289,236,248"/>
+<area shape="rect" id="Node000005" title=" " alt="" coords="315,299,374,324"/>
+<area shape="poly" id="edge4_Node000003_Node000005" title=" " alt="" coords="271,249,321,288,318,292,268,253"/>
+<area shape="poly" id="edge13_Node000006_Node000004" title=" " alt="" coords="257,106,233,127,209,154,188,187,171,223,150,286,144,284,166,221,184,184,205,150,230,123,253,102"/>
+<area shape="poly" id="edge12_Node000006_Node000005" title=" " alt="" coords="299,102,334,120,374,147,412,181,427,202,439,225,441,247,430,267,410,283,388,296,385,291,407,278,425,263,436,246,434,226,423,205,408,185,371,151,332,125,297,107"/>
+<area shape="rect" id="Node000007" href="$Command_8h.html" title="Declares the Command abstract base class for command interface." alt="" coords="219,152,321,177"/>
+<area shape="poly" id="edge7_Node000006_Node000007" title=" " alt="" coords="273,104,273,138,267,138,267,104"/>
+<area shape="rect" id="Node000008" title=" " alt="" coords="382,225,425,251"/>
+<area shape="poly" id="edge14_Node000006_Node000008" title=" " alt="" coords="285,102,335,150,388,212,384,216,331,154,281,106"/>
+<area shape="poly" id="edge8_Node000007_Node000003" title=" " alt="" coords="270,178,263,212,258,211,265,177"/>
+<area shape="poly" id="edge10_Node000007_Node000004" title=" " alt="" coords="253,180,224,200,195,227,172,257,155,287,150,285,168,254,191,224,221,196,250,175"/>
+<area shape="poly" id="edge9_Node000007_Node000005" title=" " alt="" coords="284,176,303,197,322,224,334,255,343,284,337,286,329,257,317,227,299,200,280,179"/>
+<area shape="poly" id="edge11_Node000007_Node000008" title=" " alt="" coords="293,175,371,217,369,221,290,180"/>
+</map>

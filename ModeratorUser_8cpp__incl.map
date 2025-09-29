@@ -1,0 +1,26 @@
+<map id="ModeratorUser.cpp" name="ModeratorUser.cpp">
+<area shape="rect" id="Node000001" title="Implementation of the ModeratorUser methods." alt="" coords="313,5,459,31"/>
+<area shape="rect" id="Node000002" href="$ModeratorUser_8h.html" title="Moderator user with limited administrative privileges." alt="" coords="26,79,157,104"/>
+<area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="339,33,153,78,152,73,338,28"/>
+<area shape="rect" id="Node000005" href="$ChatRoom_8h.html" title="Declares the ChatRoom class for managing user messages." alt="" coords="195,299,297,324"/>
+<area shape="poly" id="edge14_Node000001_Node000005" title=" " alt="" coords="383,32,260,287,255,285,378,30"/>
+<area shape="rect" id="Node000009" title=" " alt="" coords="423,79,503,104"/>
+<area shape="poly" id="edge15_Node000001_Node000009" title=" " alt="" coords="400,29,442,67,439,71,397,33"/>
+<area shape="rect" id="Node000003" href="$Users_8h.html" title="Declares the Users class for chat room participants." alt="" coords="56,152,127,177"/>
+<area shape="poly" id="edge2_Node000002_Node000003" title=" " alt="" coords="94,104,94,138,89,138,89,104"/>
+<area shape="rect" id="Node000006" title=" " alt="" coords="16,372,79,397"/>
+<area shape="poly" id="edge13_Node000002_Node000006" title=" " alt="" coords="82,106,64,127,47,153,30,192,21,223,10,299,8,311,10,323,18,342,30,360,26,363,14,345,5,325,3,311,5,298,15,222,25,190,42,151,59,124,78,103"/>
+<area shape="rect" id="Node000004" href="$Command_8h.html" title="Declares the Command abstract base class for command interface." alt="" coords="85,225,186,251"/>
+<area shape="poly" id="edge3_Node000003_Node000004" title=" " alt="" coords="101,176,123,212,119,215,96,179"/>
+<area shape="poly" id="edge11_Node000003_Node000006" title=" " alt="" coords="84,179,49,229,30,263,17,299,15,315,18,330,32,359,27,361,13,332,10,315,11,298,25,261,44,226,80,176"/>
+<area shape="rect" id="Node000007" title=" " alt="" coords="217,372,275,397"/>
+<area shape="poly" id="edge10_Node000003_Node000007" title=" " alt="" coords="128,173,173,189,225,214,274,250,295,272,312,298,316,317,309,336,295,352,279,366,275,362,291,348,304,333,311,317,308,300,291,275,271,254,222,219,171,194,126,178"/>
+<area shape="rect" id="Node000008" title=" " alt="" coords="26,299,69,324"/>
+<area shape="poly" id="edge12_Node000003_Node000008" title=" " alt="" coords="90,178,75,226,57,286,52,285,70,225,85,177"/>
+<area shape="poly" id="edge4_Node000004_Node000005" title=" " alt="" coords="155,248,218,289,215,293,152,253"/>
+<area shape="poly" id="edge8_Node000004_Node000006" title=" " alt="" coords="130,253,64,362,59,359,126,250"/>
+<area shape="poly" id="edge7_Node000004_Node000007" title=" " alt="" coords="143,250,160,284,185,322,223,361,219,365,181,326,156,286,138,252"/>
+<area shape="poly" id="edge9_Node000004_Node000008" title=" " alt="" coords="123,253,74,292,71,288,120,249"/>
+<area shape="poly" id="edge5_Node000005_Node000006" title=" " alt="" coords="215,327,93,370,91,365,213,322"/>
+<area shape="poly" id="edge6_Node000005_Node000007" title=" " alt="" coords="249,324,249,358,243,358,243,324"/>
+</map>

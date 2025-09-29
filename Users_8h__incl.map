@@ -1,0 +1,18 @@
+<map id="Users.h" name="Users.h">
+<area shape="rect" id="Node000001" title="Declares the Users class for chat room participants." alt="" coords="195,5,265,31"/>
+<area shape="rect" id="Node000002" href="$Command_8h.html" title="Declares the Command abstract base class for command interface." alt="" coords="135,79,237,104"/>
+<area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="225,32,203,68,198,66,220,30"/>
+<area shape="rect" id="Node000004" title=" " alt="" coords="5,225,68,251"/>
+<area shape="poly" id="edge9_Node000001_Node000004" title=" " alt="" coords="199,33,161,51,117,76,76,110,59,131,46,153,38,182,37,211,31,211,32,182,41,151,55,128,72,107,114,72,158,46,197,28"/>
+<area shape="rect" id="Node000005" title=" " alt="" coords="186,225,245,251"/>
+<area shape="poly" id="edge8_Node000001_Node000005" title=" " alt="" coords="246,29,272,56,300,93,310,113,316,135,317,157,310,179,287,205,258,223,255,219,283,201,305,176,312,156,311,136,305,115,295,95,268,59,242,33"/>
+<area shape="rect" id="Node000006" title=" " alt="" coords="253,152,295,177"/>
+<area shape="poly" id="edge10_Node000001_Node000006" title=" " alt="" coords="236,30,251,78,269,138,264,140,246,79,231,31"/>
+<area shape="rect" id="Node000003" href="$ChatRoom_8h.html" title="Declares the ChatRoom class for managing user messages." alt="" coords="75,152,177,177"/>
+<area shape="poly" id="edge2_Node000002_Node000003" title=" " alt="" coords="178,106,147,143,142,140,174,103"/>
+<area shape="poly" id="edge6_Node000002_Node000004" title=" " alt="" coords="142,107,101,125,81,138,64,154,49,182,41,212,36,211,44,180,60,150,78,134,98,120,140,102"/>
+<area shape="poly" id="edge5_Node000002_Node000005" title=" " alt="" coords="191,104,213,211,208,212,186,105"/>
+<area shape="poly" id="edge7_Node000002_Node000006" title=" " alt="" coords="202,102,251,141,247,145,198,106"/>
+<area shape="poly" id="edge3_Node000003_Node000004" title=" " alt="" coords="113,179,64,219,60,214,110,175"/>
+<area shape="poly" id="edge4_Node000003_Node000005" title=" " alt="" coords="142,175,192,214,188,219,139,179"/>
+</map>

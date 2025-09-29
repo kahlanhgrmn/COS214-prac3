@@ -1,0 +1,9 @@
+<map id="ChatRoomIterator.h" name="ChatRoomIterator.h">
+<area shape="rect" id="Node000001" title="ConcreteIterator for the Chatroom collection." alt="" coords="98,5,247,31"/>
+<area shape="rect" id="Node000002" href="$ChatRoomIterator_8cpp.html" title="Implementation of the ChatRoomIterator class methods." alt="" coords="5,79,169,104"/>
+<area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="150,41,103,80,100,76,147,37"/>
+<area shape="rect" id="Node000003" href="$IteratorCreator_8h.html" title="Factory class for creating different types of iterators." alt="" coords="193,79,323,104"/>
+<area shape="poly" id="edge2_Node000001_Node000003" title=" " alt="" coords="198,37,246,76,242,80,195,41"/>
+<area shape="rect" id="Node000004" href="$IteratorCreator_8cpp.html" title="Implementation of IteratorCreator methods." alt="" coords="186,152,330,177"/>
+<area shape="poly" id="edge3_Node000003_Node000004" title=" " alt="" coords="261,118,261,152,255,152,255,118"/>
+</map>

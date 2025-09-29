@@ -1,0 +1,23 @@
+<map id="UserIterator.h" name="UserIterator.h">
+<area shape="rect" id="Node000001" title="ConcreteIterator for the Users collection." alt="" coords="106,5,216,31"/>
+<area shape="rect" id="Node000002" href="$Iterator_8h.html" title="Abstract Iterator interface for the Iterator design pattern." alt="" coords="20,79,102,104"/>
+<area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="147,33,90,73,87,68,143,29"/>
+<area shape="rect" id="Node000003" href="$Users_8h.html" title="Declares the Users class for chat room participants." alt="" coords="126,79,196,104"/>
+<area shape="poly" id="edge2_Node000001_Node000003" title=" " alt="" coords="164,31,164,65,158,65,158,31"/>
+<area shape="rect" id="Node000006" title=" " alt="" coords="274,299,336,324"/>
+<area shape="poly" id="edge13_Node000001_Node000006" title=" " alt="" coords="175,29,204,60,242,106,279,162,306,225,311,256,311,285,306,285,306,256,301,226,274,164,238,109,200,63,171,33"/>
+<area shape="rect" id="Node000004" href="$Command_8h.html" title="Declares the Command abstract base class for command interface." alt="" coords="110,152,212,177"/>
+<area shape="poly" id="edge3_Node000003_Node000004" title=" " alt="" coords="164,104,164,138,158,138,158,104"/>
+<area shape="poly" id="edge11_Node000003_Node000006" title=" " alt="" coords="177,102,230,151,259,186,283,224,296,255,303,284,298,286,291,257,279,227,255,189,226,155,174,106"/>
+<area shape="rect" id="Node000007" title=" " alt="" coords="72,299,130,324"/>
+<area shape="poly" id="edge10_Node000003_Node000007" title=" " alt="" coords="138,107,106,125,69,152,36,185,11,226,8,238,11,249,33,274,61,292,58,297,29,278,7,252,3,238,7,224,31,182,66,147,103,121,135,102"/>
+<area shape="rect" id="Node000008" title=" " alt="" coords="21,225,64,251"/>
+<area shape="poly" id="edge12_Node000003_Node000008" title=" " alt="" coords="149,106,100,154,58,215,54,212,96,150,145,102"/>
+<area shape="rect" id="Node000005" href="$ChatRoom_8h.html" title="Declares the ChatRoom class for managing user messages." alt="" coords="139,225,242,251"/>
+<area shape="poly" id="edge4_Node000004_Node000005" title=" " alt="" coords="168,177,183,212,178,214,163,179"/>
+<area shape="poly" id="edge8_Node000004_Node000006" title=" " alt="" coords="187,175,221,195,256,223,280,254,297,285,292,287,275,257,252,227,218,200,184,180"/>
+<area shape="poly" id="edge7_Node000004_Node000007" title=" " alt="" coords="156,179,130,226,110,286,105,284,125,224,151,176"/>
+<area shape="poly" id="edge9_Node000004_Node000008" title=" " alt="" coords="143,180,75,220,72,216,141,175"/>
+<area shape="poly" id="edge5_Node000005_Node000006" title=" " alt="" coords="210,248,276,289,273,294,207,253"/>
+<area shape="poly" id="edge6_Node000005_Node000007" title=" " alt="" coords="178,253,128,292,125,288,174,249"/>
+</map>

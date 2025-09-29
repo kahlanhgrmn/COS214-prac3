@@ -1,0 +1,5 @@
+<map id="CtrlCat" name="CtrlCat">
+<area shape="rect" id="Node000001" title="A concrete chat room implementation where users that like cats can send and receive messages." alt="" coords="17,79,84,104"/>
+<area shape="rect" id="Node000002" href="$classChatRoom.html" title="Represents a chat room where users can send and receive messages." alt="" coords="5,5,96,31"/>
+<area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="53,44,53,79,48,79,48,44"/>
+</map>

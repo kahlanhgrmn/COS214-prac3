@@ -1,0 +1,5 @@
+<map id="AdminUser" name="AdminUser">
+<area shape="rect" id="Node000001" title="Administrator user with full system control." alt="" coords="5,79,100,104"/>
+<area shape="rect" id="Node000002" href="$classUsers.html" title="Represents a user in the PetSpace chat system." alt="" coords="23,5,82,31"/>
+<area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="55,44,55,79,50,79,50,44"/>
+</map>

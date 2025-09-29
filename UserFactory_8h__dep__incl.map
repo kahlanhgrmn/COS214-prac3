@@ -1,0 +1,17 @@
+<map id="UserFactory.h" name="UserFactory.h">
+<area shape="rect" id="Node000001" title="Abstract factory for creating Users." alt="" coords="313,5,422,31"/>
+<area shape="rect" id="Node000002" href="$AdminUserFactory_8h.html" title="Concrete factory for creating AdminUser objects." alt="" coords="21,79,172,104"/>
+<area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="312,37,141,81,140,76,310,32"/>
+<area shape="rect" id="Node000004" href="$BasicUserFactory_8h.html" title="Concrete factory for creating BasicUser objects." alt="" coords="203,79,347,104"/>
+<area shape="poly" id="edge3_Node000001_Node000004" title=" " alt="" coords="344,41,292,81,289,76,340,37"/>
+<area shape="rect" id="Node000006" href="$ModeratorUserFactory_8h.html" title="Concrete factory for creating ModeratorUser objects." alt="" coords="371,79,547,104"/>
+<area shape="poly" id="edge5_Node000001_Node000006" title=" " alt="" coords="394,37,446,76,443,81,391,41"/>
+<area shape="rect" id="Node000008" href="$UserFactory_8cpp.html" title="Implementation of UserFactory methods." alt="" coords="572,79,696,104"/>
+<area shape="poly" id="edge7_Node000001_Node000008" title=" " alt="" coords="424,32,592,76,590,81,423,37"/>
+<area shape="rect" id="Node000003" href="$AdminUserFactory_8cpp.html" title="Implementation of AdminUserFactory methods." alt="" coords="5,152,172,177"/>
+<area shape="poly" id="edge2_Node000002_Node000003" title=" " alt="" coords="96,118,93,152,87,152,91,117"/>
+<area shape="rect" id="Node000005" href="$BasicUserFactory_8cpp.html" title="Implementation of BasicUserFactory methods." alt="" coords="196,152,355,177"/>
+<area shape="poly" id="edge4_Node000004_Node000005" title=" " alt="" coords="278,118,278,152,273,152,273,118"/>
+<area shape="rect" id="Node000007" href="$ModeratorUserFactory_8cpp.html" title="Implementation of ModeratorUserFactory methods." alt="" coords="379,152,569,177"/>
+<area shape="poly" id="edge6_Node000006_Node000007" title=" " alt="" coords="467,117,474,151,469,152,462,118"/>
+</map>

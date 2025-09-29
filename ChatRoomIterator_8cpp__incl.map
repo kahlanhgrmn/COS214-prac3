@@ -1,0 +1,16 @@
+<map id="ChatRoomIterator.cpp" name="ChatRoomIterator.cpp">
+<area shape="rect" id="Node000001" title="Implementation of the ChatRoomIterator class methods." alt="" coords="112,5,276,31"/>
+<area shape="rect" id="Node000002" href="$ChatRoomIterator_8h.html" title="ConcreteIterator for the Chatroom collection." alt="" coords="50,79,199,104"/>
+<area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="184,33,147,71,143,67,181,29"/>
+<area shape="rect" id="Node000007" title=" " alt="" coords="223,79,303,104"/>
+<area shape="poly" id="edge7_Node000001_Node000007" title=" " alt="" coords="207,29,245,67,241,71,204,33"/>
+<area shape="rect" id="Node000003" href="$Iterator_8h.html" title="Abstract Iterator interface for the Iterator design pattern." alt="" coords="5,152,87,177"/>
+<area shape="poly" id="edge2_Node000002_Node000003" title=" " alt="" coords="114,106,71,145,67,141,110,102"/>
+<area shape="rect" id="Node000004" href="$ChatRoom_8h.html" title="Declares the ChatRoom class for managing user messages." alt="" coords="163,152,265,177"/>
+<area shape="poly" id="edge3_Node000002_Node000004" title=" " alt="" coords="141,102,190,141,187,145,137,106"/>
+<area shape="rect" id="Node000005" title=" " alt="" coords="96,225,159,251"/>
+<area shape="poly" id="edge6_Node000002_Node000005" title=" " alt="" coords="128,104,130,212,124,212,122,105"/>
+<area shape="poly" id="edge4_Node000004_Node000005" title=" " alt="" coords="202,179,154,219,150,214,198,175"/>
+<area shape="rect" id="Node000006" title=" " alt="" coords="185,225,243,251"/>
+<area shape="poly" id="edge5_Node000004_Node000006" title=" " alt="" coords="217,178,217,212,211,212,211,178"/>
+</map>

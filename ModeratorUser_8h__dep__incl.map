@@ -1,0 +1,9 @@
+<map id="ModeratorUser.h" name="ModeratorUser.h">
+<area shape="rect" id="Node000001" title="Moderator user with limited administrative privileges." alt="" coords="105,5,235,31"/>
+<area shape="rect" id="Node000002" href="$ModeratorUser_8cpp.html" title="Implementation of the ModeratorUser methods." alt="" coords="5,79,151,104"/>
+<area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="146,41,95,81,91,76,143,37"/>
+<area shape="rect" id="Node000003" href="$ModeratorUserFactory_8h.html" title="Concrete factory for creating ModeratorUser objects." alt="" coords="175,79,351,104"/>
+<area shape="poly" id="edge2_Node000001_Node000003" title=" " alt="" coords="197,37,250,76,246,81,194,41"/>
+<area shape="rect" id="Node000004" href="$ModeratorUserFactory_8cpp.html" title="Implementation of ModeratorUserFactory methods." alt="" coords="168,152,359,177"/>
+<area shape="poly" id="edge3_Node000003_Node000004" title=" " alt="" coords="266,118,266,152,261,152,261,118"/>
+</map>

@@ -1,0 +1,9 @@
+<map id="SendMessageCommand" name="SendMessageCommand">
+<area shape="rect" id="Node000001" title="A concrete command that sends messages to all users in a chat room." alt="" coords="12,168,191,193"/>
+<area shape="rect" id="Node000002" href="$classCommand.html" title="Abstract base class for commands in the Command pattern." alt="" coords="57,93,146,119"/>
+<area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="104,133,104,168,99,168,99,133"/>
+<area shape="rect" id="Node000003" href="$classChatRoom.html" title="Represents a chat room where users can send and receive messages." alt="" coords="5,5,96,31"/>
+<area shape="poly" id="edge2_Node000002_Node000003" title=" " alt="" coords="50,44,54,68,65,81,78,91,75,95,61,85,50,70,44,45"/>
+<area shape="rect" id="Node000004" href="$classUsers.html" title="Represents a user in the PetSpace chat system." alt="" coords="123,5,181,31"/>
+<area shape="poly" id="edge3_Node000002_Node000004" title=" " alt="" coords="141,44,125,71,111,94,106,92,120,68,136,41"/>
+</map>

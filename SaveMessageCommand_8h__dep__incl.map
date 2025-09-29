@@ -1,0 +1,7 @@
+<map id="SaveMessageCommand.h" name="SaveMessageCommand.h">
+<area shape="rect" id="Node000001" title="Declares the SaveMessageCommand class for storing messages in chat history." alt="" coords="99,5,289,31"/>
+<area shape="rect" id="Node000002" href="$SaveMessageCommand_8cpp.html" title="Implements the SaveMessageCommand class." alt="" coords="5,79,212,104"/>
+<area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="172,41,124,80,121,76,168,37"/>
+<area shape="rect" id="Node000003" href="$Users_8cpp.html" title="Implements the Users class chatroom participants." alt="" coords="236,79,323,104"/>
+<area shape="poly" id="edge2_Node000001_Node000003" title=" " alt="" coords="220,37,267,76,264,80,216,41"/>
+</map>

@@ -1,0 +1,25 @@
+<map id="BasicUserFactory.h" name="BasicUserFactory.h">
+<area shape="rect" id="Node000001" title="Concrete factory for creating BasicUser objects." alt="" coords="158,5,302,31"/>
+<area shape="rect" id="Node000002" href="$UserFactory_8h.html" title="Abstract factory for creating Users." alt="" coords="111,79,221,104"/>
+<area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="221,33,187,70,183,67,217,29"/>
+<area shape="rect" id="Node000009" href="$BasicUser_8h.html" title="Implementation of the BasicUser methods." alt="" coords="245,79,343,104"/>
+<area shape="poly" id="edge13_Node000001_Node000009" title=" " alt="" coords="243,29,277,67,273,70,239,33"/>
+<area shape="rect" id="Node000003" href="$Users_8h.html" title="Declares the Users class for chat room participants." alt="" coords="195,152,265,177"/>
+<area shape="poly" id="edge2_Node000002_Node000003" title=" " alt="" coords="179,103,213,140,209,144,175,106"/>
+<area shape="rect" id="Node000004" href="$Command_8h.html" title="Declares the Command abstract base class for command interface." alt="" coords="135,225,237,251"/>
+<area shape="poly" id="edge3_Node000003_Node000004" title=" " alt="" coords="225,179,203,215,198,212,220,176"/>
+<area shape="rect" id="Node000006" title=" " alt="" coords="5,372,68,397"/>
+<area shape="poly" id="edge11_Node000003_Node000006" title=" " alt="" coords="199,180,161,197,117,223,76,257,59,277,46,300,38,329,37,358,31,358,32,328,41,298,55,274,72,253,114,219,158,193,197,175"/>
+<area shape="rect" id="Node000007" title=" " alt="" coords="186,372,245,397"/>
+<area shape="poly" id="edge10_Node000003_Node000007" title=" " alt="" coords="246,176,272,202,300,239,310,260,316,282,317,304,310,325,287,352,258,370,255,365,283,348,305,323,312,303,311,283,305,262,295,242,268,206,242,180"/>
+<area shape="rect" id="Node000008" title=" " alt="" coords="253,299,295,324"/>
+<area shape="poly" id="edge12_Node000003_Node000008" title=" " alt="" coords="236,177,251,225,269,285,264,286,246,226,231,178"/>
+<area shape="rect" id="Node000005" href="$ChatRoom_8h.html" title="Declares the ChatRoom class for managing user messages." alt="" coords="75,299,177,324"/>
+<area shape="poly" id="edge4_Node000004_Node000005" title=" " alt="" coords="178,253,147,290,142,286,174,249"/>
+<area shape="poly" id="edge8_Node000004_Node000006" title=" " alt="" coords="142,253,101,271,81,284,64,300,49,329,41,358,36,357,44,327,60,297,78,280,98,267,140,248"/>
+<area shape="poly" id="edge7_Node000004_Node000007" title=" " alt="" coords="191,251,213,358,208,359,186,252"/>
+<area shape="poly" id="edge9_Node000004_Node000008" title=" " alt="" coords="202,249,251,288,247,292,198,253"/>
+<area shape="poly" id="edge5_Node000005_Node000006" title=" " alt="" coords="113,326,64,365,60,361,110,322"/>
+<area shape="poly" id="edge6_Node000005_Node000007" title=" " alt="" coords="142,322,192,361,188,365,139,326"/>
+<area shape="poly" id="edge14_Node000009_Node000003" title=" " alt="" coords="285,106,251,144,247,140,281,103"/>
+</map>

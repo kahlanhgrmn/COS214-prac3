@@ -1,0 +1,22 @@
+<map id="AdminUser.h" name="AdminUser.h">
+<area shape="rect" id="Node000001" title="Administrator user with full system privileges." alt="" coords="39,5,144,31"/>
+<area shape="rect" id="Node000002" href="$Users_8h.html" title="Declares the Users class for chat room participants." alt="" coords="56,79,127,104"/>
+<area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="94,31,94,65,89,65,89,31"/>
+<area shape="rect" id="Node000005" title=" " alt="" coords="16,299,79,324"/>
+<area shape="poly" id="edge13_Node000001_Node000005" title=" " alt="" coords="82,33,64,54,47,80,30,119,21,150,10,226,8,238,10,250,18,269,30,286,26,289,14,272,5,251,3,238,5,225,15,149,25,117,42,77,59,51,78,29"/>
+<area shape="rect" id="Node000006" title=" " alt="" coords="281,299,339,324"/>
+<area shape="poly" id="edge12_Node000001_Node000006" title=" " alt="" coords="115,29,161,56,218,99,247,126,273,156,296,189,314,224,320,256,318,285,313,285,314,256,309,226,292,191,269,159,243,130,214,104,158,61,112,33"/>
+<area shape="rect" id="Node000003" href="$Command_8h.html" title="Declares the Command abstract base class for command interface." alt="" coords="85,152,186,177"/>
+<area shape="poly" id="edge2_Node000002_Node000003" title=" " alt="" coords="101,103,123,139,119,142,96,106"/>
+<area shape="poly" id="edge10_Node000002_Node000005" title=" " alt="" coords="84,106,49,156,30,190,17,226,15,241,18,257,32,286,27,288,13,259,10,242,11,225,25,188,44,153,80,103"/>
+<area shape="poly" id="edge9_Node000002_Node000006" title=" " alt="" coords="123,102,162,120,207,146,252,181,290,224,303,254,310,284,305,285,298,256,285,227,249,185,204,150,159,124,120,106"/>
+<area shape="rect" id="Node000007" title=" " alt="" coords="26,225,69,251"/>
+<area shape="poly" id="edge11_Node000002_Node000007" title=" " alt="" coords="90,105,75,153,57,213,52,211,70,151,85,103"/>
+<area shape="rect" id="Node000004" href="$ChatRoom_8h.html" title="Declares the ChatRoom class for managing user messages." alt="" coords="144,225,247,251"/>
+<area shape="poly" id="edge3_Node000003_Node000004" title=" " alt="" coords="147,176,179,213,175,217,143,179"/>
+<area shape="poly" id="edge7_Node000003_Node000005" title=" " alt="" coords="130,179,64,288,59,286,126,176"/>
+<area shape="poly" id="edge6_Node000003_Node000006" title=" " alt="" coords="174,175,218,194,261,223,286,253,302,284,298,287,281,256,258,227,215,199,172,180"/>
+<area shape="poly" id="edge8_Node000003_Node000007" title=" " alt="" coords="123,179,74,219,71,214,120,175"/>
+<area shape="poly" id="edge4_Node000004_Node000005" title=" " alt="" coords="173,253,85,295,83,290,170,248"/>
+<area shape="poly" id="edge5_Node000004_Node000006" title=" " alt="" coords="215,248,281,289,278,294,212,253"/>
+</map>

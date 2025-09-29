@@ -1,0 +1,13 @@
+<map id="Command.h" name="Command.h">
+<area shape="rect" id="Node000001" title="Declares the Command abstract base class for command interface." alt="" coords="74,5,175,31"/>
+<area shape="rect" id="Node000002" href="$ChatRoom_8h.html" title="Declares the ChatRoom class for managing user messages." alt="" coords="29,79,132,104"/>
+<area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="120,32,97,68,93,66,115,30"/>
+<area shape="rect" id="Node000003" title=" " alt="" coords="5,152,68,177"/>
+<area shape="poly" id="edge5_Node000001_Node000003" title=" " alt="" coords="84,33,48,51,32,64,19,80,14,94,15,109,25,139,20,140,9,110,9,93,14,77,28,60,45,47,82,28"/>
+<area shape="rect" id="Node000004" title=" " alt="" coords="94,152,153,177"/>
+<area shape="poly" id="edge4_Node000001_Node000004" title=" " alt="" coords="133,30,145,63,148,83,147,104,137,140,132,139,142,104,143,84,139,64,128,32"/>
+<area shape="rect" id="Node000005" title=" " alt="" coords="207,79,250,104"/>
+<area shape="poly" id="edge6_Node000001_Node000005" title=" " alt="" coords="143,28,202,68,199,73,140,33"/>
+<area shape="poly" id="edge2_Node000002_Node000003" title=" " alt="" coords="76,106,53,142,49,139,71,103"/>
+<area shape="poly" id="edge3_Node000002_Node000004" title=" " alt="" coords="90,103,112,139,107,142,85,106"/>
+</map>

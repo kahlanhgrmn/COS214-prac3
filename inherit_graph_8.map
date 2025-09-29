@@ -1,0 +1,9 @@
+<map id="Graphical Class Hierarchy" name="Graphical Class Hierarchy">
+<area shape="rect" id="Node000000" href="$classUserFactory.html" title="Abstract creator class for the Factory Method pattern." alt="" coords="5,55,104,80"/>
+<area shape="rect" id="Node000001" href="$classAdminUserFactory.html" title="Concrete creator for AdminUser objects." alt="" coords="165,5,306,31"/>
+<area shape="poly" id="edge8_Node000000_Node000001" title=" " alt="" coords="115,48,187,28,188,33,116,53"/>
+<area shape="rect" id="Node000002" href="$classBasicUserFactory.html" title="Concrete creator for BasicUser objects." alt="" coords="168,55,303,80"/>
+<area shape="poly" id="edge9_Node000000_Node000002" title=" " alt="" coords="118,65,168,65,168,70,118,70"/>
+<area shape="rect" id="Node000003" href="$classModeratorUserFactory.html" title="Concrete creator for ModeratorUser objects." alt="" coords="152,104,319,129"/>
+<area shape="poly" id="edge10_Node000000_Node000003" title=" " alt="" coords="116,81,188,101,187,106,115,86"/>
+</map>

@@ -1,0 +1,9 @@
+<map id="MessageHistoryIterator.h" name="MessageHistoryIterator.h">
+<area shape="rect" id="Node000001" title="ConcreteIterator for the chats message history." alt="" coords="79,5,265,31"/>
+<area shape="rect" id="Node000002" href="$IteratorCreator_8h.html" title="Factory class for creating different types of iterators." alt="" coords="13,79,142,104"/>
+<area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="147,41,94,81,91,76,144,37"/>
+<area shape="rect" id="Node000004" href="$MessageHistoryIterator_8cpp.html" title="Implementation of the MessageHistoryIterator class methods." alt="" coords="166,79,367,104"/>
+<area shape="poly" id="edge3_Node000001_Node000004" title=" " alt="" coords="200,37,253,76,250,81,197,41"/>
+<area shape="rect" id="Node000003" href="$IteratorCreator_8cpp.html" title="Implementation of IteratorCreator methods." alt="" coords="5,152,149,177"/>
+<area shape="poly" id="edge2_Node000002_Node000003" title=" " alt="" coords="80,118,80,152,75,152,75,118"/>
+</map>

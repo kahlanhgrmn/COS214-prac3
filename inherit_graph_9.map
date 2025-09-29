@@ -1,0 +1,9 @@
+<map id="Graphical Class Hierarchy" name="Graphical Class Hierarchy">
+<area shape="rect" id="Node000000" href="$classUsers.html" title="Represents a user in the PetSpace chat system." alt="" coords="5,55,64,80"/>
+<area shape="rect" id="Node000001" href="$classAdminUser.html" title="Administrator user with full system control." alt="" coords="124,5,219,31"/>
+<area shape="poly" id="edge11_Node000000_Node000001" title=" " alt="" coords="76,50,135,28,136,33,78,55"/>
+<area shape="rect" id="Node000002" href="$classBasicUser.html" title="Standard user implementation with the basic chat functionalities." alt="" coords="128,55,215,80"/>
+<area shape="poly" id="edge12_Node000000_Node000002" title=" " alt="" coords="78,65,128,65,128,70,78,70"/>
+<area shape="rect" id="Node000003" href="$classModeratorUser.html" title="Moderator user with content moderation capabilities." alt="" coords="112,104,231,129"/>
+<area shape="poly" id="edge13_Node000000_Node000003" title=" " alt="" coords="78,80,136,101,135,106,76,85"/>
+</map>

@@ -1,0 +1,5 @@
+<map id="BasicUserFactory" name="BasicUserFactory">
+<area shape="rect" id="Node000001" title="Concrete creator for BasicUser objects." alt="" coords="5,79,140,104"/>
+<area shape="rect" id="Node000002" href="$classUserFactory.html" title="Abstract creator class for the Factory Method pattern." alt="" coords="23,5,122,31"/>
+<area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="75,44,75,79,70,79,70,44"/>
+</map>

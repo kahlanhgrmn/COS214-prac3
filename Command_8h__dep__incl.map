@@ -1,0 +1,60 @@
+<map id="Command.h" name="Command.h">
+<area shape="rect" id="Node000001" title="Declares the Command abstract base class for command interface." alt="" coords="314,5,415,31"/>
+<area shape="rect" id="Node000002" href="$SaveMessageCommand_8h.html" title="Declares the SaveMessageCommand class for storing messages in chat history." alt="" coords="69,79,260,104"/>
+<area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="320,38,198,81,196,76,319,33"/>
+<area shape="rect" id="Node000004" href="$Users_8cpp.html" title="Implements the Users class chatroom participants." alt="" coords="236,152,323,177"/>
+<area shape="poly" id="edge7_Node000001_Node000004" title=" " alt="" coords="350,43,326,80,287,153,282,150,321,77,346,40"/>
+<area shape="rect" id="Node000005" href="$SendMessageCommand_8h.html" title="Declares the SendMessageCommand class for delivering messages to chat room users." alt="" coords="336,79,527,104"/>
+<area shape="poly" id="edge4_Node000001_Node000005" title=" " alt="" coords="387,39,422,77,419,80,383,43"/>
+<area shape="rect" id="Node000007" href="$Users_8h.html" title="Declares the Users class for chat room participants." alt="" coords="855,79,925,104"/>
+<area shape="poly" id="edge8_Node000001_Node000007" title=" " alt="" coords="429,25,855,83,854,88,429,31"/>
+<area shape="rect" id="Node000003" href="$SaveMessageCommand_8cpp.html" title="Implements the SaveMessageCommand class." alt="" coords="5,152,212,177"/>
+<area shape="poly" id="edge2_Node000002_Node000003" title=" " alt="" coords="149,117,120,154,116,150,145,113"/>
+<area shape="poly" id="edge3_Node000002_Node000004" title=" " alt="" coords="196,109,262,150,259,154,193,113"/>
+<area shape="poly" id="edge6_Node000005_Node000004" title=" " alt="" coords="396,112,305,154,303,149,394,107"/>
+<area shape="rect" id="Node000006" href="$SendMessageCommand_8cpp.html" title="Implements the SendMessageCommand class." alt="" coords="347,152,553,177"/>
+<area shape="poly" id="edge5_Node000005_Node000006" title=" " alt="" coords="440,117,450,151,444,153,435,118"/>
+<area shape="poly" id="edge32_Node000007_Node000004" title=" " alt="" coords="841,99,621,119,478,135,334,155,323,157,322,151,334,149,478,129,620,113,840,94"/>
+<area shape="rect" id="Node000008" href="$AdminUser_8h.html" title="Administrator user with full system privileges." alt="" coords="764,152,869,177"/>
+<area shape="poly" id="edge9_Node000007_Node000008" title=" " alt="" coords="870,116,830,154,827,150,866,112"/>
+<area shape="rect" id="Node000012" href="$BasicUser_8h.html" title="Implementation of the BasicUser methods." alt="" coords="1042,152,1141,177"/>
+<area shape="poly" id="edge13_Node000007_Node000012" title=" " alt="" coords="936,106,1059,149,1058,154,935,111"/>
+<area shape="rect" id="Node000015" href="$CtrlCat_8cpp.html" title="Implements the CtrlCat concrete chatroom class." alt="" coords="1320,152,1415,177"/>
+<area shape="poly" id="edge16_Node000007_Node000015" title=" " alt="" coords="940,96,1103,118,1308,149,1320,151,1319,157,1307,155,1103,124,939,102"/>
+<area shape="rect" id="Node000016" href="$Dogorithm_8cpp.html" title="Implements the Dogorithm class for managing user messages." alt="" coords="1439,152,1557,177"/>
+<area shape="poly" id="edge17_Node000007_Node000016" title=" " alt="" coords="940,95,1152,116,1428,149,1439,151,1438,156,1427,155,1152,122,939,100"/>
+<area shape="rect" id="Node000017" href="$IteratorCreator_8h.html" title="Factory class for creating different types of iterators." alt="" coords="284,225,413,251"/>
+<area shape="poly" id="edge18_Node000007_Node000017" title=" " alt="" coords="842,102,738,122,678,137,619,154,593,167,567,180,480,208,402,228,400,223,479,203,565,175,591,162,617,150,676,131,737,117,841,97"/>
+<area shape="rect" id="Node000019" href="$ModeratorUser_8h.html" title="Moderator user with limited administrative privileges." alt="" coords="1165,152,1295,177"/>
+<area shape="poly" id="edge20_Node000007_Node000019" title=" " alt="" coords="940,100,1176,149,1175,155,939,105"/>
+<area shape="rect" id="Node000023" href="$UserFactory_8h.html" title="Abstract factory for creating Users." alt="" coords="909,152,1018,177"/>
+<area shape="poly" id="edge24_Node000007_Node000023" title=" " alt="" coords="914,112,953,150,950,154,910,116"/>
+<area shape="rect" id="Node000025" href="$UserIterator_8h.html" title="ConcreteIterator for the Users collection." alt="" coords="629,152,740,177"/>
+<area shape="poly" id="edge29_Node000007_Node000025" title=" " alt="" coords="845,111,719,154,717,149,843,106"/>
+<area shape="rect" id="Node000009" href="$AdminUser_8cpp.html" title="Implementation of the AdminUser methods." alt="" coords="589,225,709,251"/>
+<area shape="poly" id="edge10_Node000008_Node000009" title=" " alt="" coords="778,185,677,228,675,223,776,180"/>
+<area shape="rect" id="Node000010" href="$AdminUserFactory_8h.html" title="Concrete factory for creating AdminUser objects." alt="" coords="733,225,884,251"/>
+<area shape="poly" id="edge11_Node000008_Node000010" title=" " alt="" coords="816,191,813,226,807,225,811,191"/>
+<area shape="rect" id="Node000011" href="$AdminUserFactory_8cpp.html" title="Implementation of AdminUserFactory methods." alt="" coords="725,299,892,324"/>
+<area shape="poly" id="edge12_Node000010_Node000011" title=" " alt="" coords="811,264,811,299,806,299,806,264"/>
+<area shape="rect" id="Node000013" href="$BasicUserFactory_8h.html" title="Concrete factory for creating BasicUser objects." alt="" coords="1057,225,1201,251"/>
+<area shape="poly" id="edge14_Node000012_Node000013" title=" " alt="" coords="1106,188,1125,224,1120,226,1101,191"/>
+<area shape="rect" id="Node000014" href="$BasicUserFactory_8cpp.html" title="Implementation of BasicUserFactory methods." alt="" coords="1041,299,1200,324"/>
+<area shape="poly" id="edge15_Node000013_Node000014" title=" " alt="" coords="1128,265,1125,299,1119,298,1123,264"/>
+<area shape="rect" id="Node000018" href="$IteratorCreator_8cpp.html" title="Implementation of IteratorCreator methods." alt="" coords="277,299,421,324"/>
+<area shape="poly" id="edge19_Node000017_Node000018" title=" " alt="" coords="351,264,351,299,346,299,346,264"/>
+<area shape="rect" id="Node000020" href="$ModeratorUser_8cpp.html" title="Implementation of the ModeratorUser methods." alt="" coords="1425,225,1571,251"/>
+<area shape="poly" id="edge21_Node000019_Node000020" title=" " alt="" coords="1287,178,1455,223,1454,228,1286,183"/>
+<area shape="rect" id="Node000021" href="$ModeratorUserFactory_8h.html" title="Concrete factory for creating ModeratorUser objects." alt="" coords="1225,225,1401,251"/>
+<area shape="poly" id="edge22_Node000019_Node000021" title=" " alt="" coords="1255,184,1301,223,1297,227,1252,188"/>
+<area shape="rect" id="Node000022" href="$ModeratorUserFactory_8cpp.html" title="Implementation of ModeratorUserFactory methods." alt="" coords="1224,299,1415,324"/>
+<area shape="poly" id="edge23_Node000021_Node000022" title=" " alt="" coords="1318,264,1321,298,1316,299,1312,265"/>
+<area shape="poly" id="edge25_Node000023_Node000010" title=" " alt="" coords="927,185,835,228,833,223,925,181"/>
+<area shape="poly" id="edge26_Node000023_Node000013" title=" " alt="" coords="1003,180,1103,223,1101,228,1001,185"/>
+<area shape="poly" id="edge27_Node000023_Node000021" title=" " alt="" coords="1032,177,1257,223,1256,228,1031,182"/>
+<area shape="rect" id="Node000024" href="$UserFactory_8cpp.html" title="Implementation of UserFactory methods." alt="" coords="908,225,1032,251"/>
+<area shape="poly" id="edge28_Node000023_Node000024" title=" " alt="" coords="968,191,972,225,966,225,963,191"/>
+<area shape="poly" id="edge30_Node000025_Node000017" title=" " alt="" coords="618,183,404,228,403,223,617,178"/>
+<area shape="rect" id="Node000026" href="$UserIterator_8cpp.html" title="Implementation of the UserIterator class methods." alt="" coords="437,225,564,251"/>
+<area shape="poly" id="edge31_Node000025_Node000026" title=" " alt="" coords="643,185,532,228,530,223,641,180"/>
+</map>

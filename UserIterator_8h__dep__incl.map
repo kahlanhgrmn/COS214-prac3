@@ -1,0 +1,9 @@
+<map id="UserIterator.h" name="UserIterator.h">
+<area shape="rect" id="Node000001" title="ConcreteIterator for the Users collection." alt="" coords="98,5,209,31"/>
+<area shape="rect" id="Node000002" href="$IteratorCreator_8h.html" title="Factory class for creating different types of iterators." alt="" coords="13,79,142,104"/>
+<area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="133,42,92,80,88,76,129,38"/>
+<area shape="rect" id="Node000004" href="$UserIterator_8cpp.html" title="Implementation of the UserIterator class methods." alt="" coords="166,79,293,104"/>
+<area shape="poly" id="edge3_Node000001_Node000004" title=" " alt="" coords="177,38,219,76,215,80,174,42"/>
+<area shape="rect" id="Node000003" href="$IteratorCreator_8cpp.html" title="Implementation of IteratorCreator methods." alt="" coords="5,152,149,177"/>
+<area shape="poly" id="edge2_Node000002_Node000003" title=" " alt="" coords="80,118,80,152,75,152,75,118"/>
+</map>

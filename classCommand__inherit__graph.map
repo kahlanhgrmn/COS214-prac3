@@ -1,0 +1,7 @@
+<map id="Command" name="Command">
+<area shape="rect" id="Node000001" title="Abstract base class for commands in the Command pattern." alt="" coords="151,5,241,31"/>
+<area shape="rect" id="Node000002" href="$classSaveMessageCommand.html" title="A concrete command that saves messages to all chat room&#39;s history." alt="" coords="5,79,184,104"/>
+<area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="170,41,113,81,110,76,167,36"/>
+<area shape="rect" id="Node000003" href="$classSendMessageCommand.html" title="A concrete command that sends messages to all users in a chat room." alt="" coords="208,79,387,104"/>
+<area shape="poly" id="edge2_Node000001_Node000003" title=" " alt="" coords="225,36,282,76,279,81,222,41"/>
+</map>

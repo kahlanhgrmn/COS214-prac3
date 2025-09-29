@@ -1,0 +1,7 @@
+<map id="BasicUser.h" name="BasicUser.h">
+<area shape="rect" id="Node000001" title="Implementation of the BasicUser methods." alt="" coords="35,5,134,31"/>
+<area shape="rect" id="Node000002" href="$BasicUserFactory_8h.html" title="Concrete factory for creating BasicUser objects." alt="" coords="13,79,157,104"/>
+<area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="87,44,87,79,82,79,82,44"/>
+<area shape="rect" id="Node000003" href="$BasicUserFactory_8cpp.html" title="Implementation of BasicUserFactory methods." alt="" coords="5,152,164,177"/>
+<area shape="poly" id="edge2_Node000002_Node000003" title=" " alt="" coords="87,118,87,152,82,152,82,118"/>
+</map>
