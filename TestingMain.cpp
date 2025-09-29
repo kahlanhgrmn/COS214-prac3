@@ -577,6 +577,62 @@ void testPerformanceAndStress() {
     }
 }
 
+void testIteratorEdgeCases(){
+    cout << "\n=== Testing Iterator Edge Cases ===" << endl;
+    
+    ChatRoom* room = new CtrlCat("IterEdgeTest");
+    BasicUserFactory factory;
+    
+    //testing calling next() when hasNext() is false
+    Iterator<Users*>* iter = IteratorCreator::createUserIterator(room);
+    iter->next();
+    runTest("Next on empty iterator returns null", iter->next() == nullptr);
+    
+    //testing calling current() at end
+    runTest("Current at end returns null", iter->current() == nullptr);
+    delete iter;
+    
+    //testing multiple resets
+    Users* user = factory.createUser("ResetTest");
+    room->registerUser(user);
+    
+    Iterator<Users*>* iter2 = IteratorCreator::createUserIterator(room);
+    iter2->next();
+    iter2->reset();
+    iter2->reset();
+    runTest("double reset works", iter2->hasNext());
+    delete iter2;
+    
+    delete room;
+    delete user;
+}
+
+void testChatRoomMethods() {
+    cout << "\n=== Testing ChatRoom Methods ===" << endl;
+    
+    ChatRoom* room = new CtrlCat("MethodTest");
+    BasicUserFactory factory;
+    
+    //testing getChatRoomName
+    runTest("ChatRoom name correct", room->getChatRoomName() == "MethodTest");
+    
+    //testing getUsers on empty room
+    runTest("Empty room has no users", room->getUsers().size() == 0);
+    
+    //testing getChatHistory on empty room
+    runTest("Empty room has no history", room->getChatHistory().size() == 0);
+    
+    //testing printChatRoomHistory
+    room->printChatRoomHistory();
+    
+    //tesing getUserList
+    room->getUserList();
+    
+    runTest("Print methods handle empty room", true);
+    
+    delete room;
+}
+
 /**
  * @brief Main testing function for the PetSpace chat system
  * @return 0 if successful, 1 if significant errors occurred
@@ -598,6 +654,8 @@ int main() {
         testAdminAndModeratorFunctionality();
         testEdgeCasesAndIntegration();
         testPerformanceAndStress();
+        testIteratorEdgeCases();
+        testChatRoomMethods();
         
         //results summary
         cout << "\n=========================================================" << endl;
