@@ -3,7 +3,6 @@
 #include "BasicUser.h"
 #include "AdminUser.h"
 #include "ModeratorUser.h"
-#include "UserCreationSystem.h"
 #include "BasicUserFactory.h"
 #include "AdminUserFactory.h"
 #include "ModeratorUserFactory.h"
@@ -61,17 +60,20 @@ void testingMediatorAndCommand() {
     ChatRoom* dogChatRoom = new Dogorithm("DOGORITHM");
 
    //creating Users
-    UserCreationSystem userSystem;
-    Users* carlos = userSystem.createUser("Carlos", "basic");
-    Users* charles = userSystem.createUser("Charles", "admin");
-    Users* lando = userSystem.createUser("Lando", "basic");
-    Users* oscar = userSystem.createUser("Oscar", "moderator");
-    Users* max = userSystem.createUser("Max", "admin");
-    Users* lewis = userSystem.createUser("Lewis", "basic");
-    Users* george = userSystem.createUser("George", "moderator");
-    Users* alex = userSystem.createUser("Alex", "admin");
-    Users* daniel = userSystem.createUser("Daniel", "moderator");
-    Users* pierre = userSystem.createUser("Pierre", "basic");
+    BasicUserFactory basicFactory;
+    AdminUserFactory adminFactory;
+    ModeratorUserFactory moderatorFactory;
+
+    Users* carlos = basicFactory.createUser("Carlos");
+    Users* charles = adminFactory.createUser("Charles");
+    Users* lando = basicFactory.createUser("Lando");
+    Users* oscar = moderatorFactory.createUser("Oscar");
+    Users* max = adminFactory.createUser("Max");
+    Users* lewis = basicFactory.createUser("Lewis");
+    Users* george = moderatorFactory.createUser("George");
+    Users* alex = adminFactory.createUser("Alex");
+    Users* daniel = moderatorFactory.createUser("Daniel");
+    Users* pierre = basicFactory.createUser("Pierre");
 
     catChatRoom->getUserList();
     dogChatRoom->getUserList();
@@ -147,8 +149,8 @@ void testingMediatorAndCommand() {
     pierre->send("Daniel left?", dogChatRoom);
 
     cout << "\n--- Adding new users mid-conversation ---" << endl;
-    Users* roger = userSystem.createUser("Roger", "admin");
-    Users* rafa = userSystem.createUser("Rafa", "moderator");
+    Users* roger = adminFactory.createUser("Roger");
+    Users* rafa = moderatorFactory.createUser("Rafa");
 
     catChatRoom->registerUser(roger);
     dogChatRoom->registerUser(rafa);
@@ -204,21 +206,18 @@ void testingMediatorAndCommand() {
 void testFactoryMethodPattern() {
     cout << "\n=== Testing Factory Method Pattern ===" << endl;
     
-    UserCreationSystem userSystem;
-    
-    cout << "Available user types: ";
-    userSystem.listAvailableUserTypes();
+    BasicUserFactory basicFactory;
+    AdminUserFactory adminFactory;
+    ModeratorUserFactory moderatorFactory;
     
     //creating different user types
-    Users* basicUser = userSystem.createUser("Alice", "basic");
-    Users* adminUser = userSystem.createUser("Bob", "admin");
-    Users* moderatorUser = userSystem.createUser("Carol", "moderator");
-    Users* invalidUser = userSystem.createUser("Dave", "invalid_type");
+    Users* basicUser = basicFactory.createUser("Alice");
+    Users* adminUser = adminFactory.createUser("Bob");
+    Users* moderatorUser = moderatorFactory.createUser("Carol");
     
     runTest("Basic user creation", basicUser != nullptr && basicUser->getUserType() == "Basic");
     runTest("Admin user creation", adminUser != nullptr && adminUser->getUserType() == "Admin");
     runTest("Moderator user creation", moderatorUser != nullptr && moderatorUser->getUserType() == "Moderator");
-    runTest("Invalid type defaults to basic", invalidUser != nullptr && invalidUser->getUserType() == "Basic");
     
     //testing privileges
     runTest("Basic user has no privileges", !basicUser->hasPrivilege("kick"));
@@ -229,9 +228,6 @@ void testFactoryMethodPattern() {
     runTest("Moderator cannot ban", !moderatorUser->hasPrivilege("ban"));
     
     //testing direct factory usage
-    BasicUserFactory basicFactory;
-    AdminUserFactory adminFactory;
-    ModeratorUserFactory moderatorFactory;
     
     Users* directBasic = basicFactory.createUser("Direct1");
     Users* directAdmin = adminFactory.createUser("Direct2");
@@ -245,7 +241,6 @@ void testFactoryMethodPattern() {
     delete basicUser;
     delete adminUser;
     delete moderatorUser;
-    delete invalidUser;
     delete directBasic;
     delete directAdmin;
     delete directModerator;
@@ -262,7 +257,10 @@ void testIteratorPattern() {
     cout << "\n=== Testing Iterator Pattern ===" << endl;
     
     ChatRoom* testRoom = new CtrlCat("IteratorTest");
-    UserCreationSystem userSystem;
+
+    BasicUserFactory basicFactory;
+    AdminUserFactory adminFactory;
+    ModeratorUserFactory moderatorFactory;
     
     //testing empty collections
     Iterator<Users*>* emptyUserIter = IteratorCreator::createUserIterator(testRoom);
@@ -275,9 +273,9 @@ void testIteratorPattern() {
     delete emptyMsgIter;
     
     //adding users and testing iteration
-    Users* user1 = userSystem.createUser("IterUser1", "basic");
-    Users* user2 = userSystem.createUser("IterUser2", "admin");
-    Users* user3 = userSystem.createUser("IterUser3", "moderator");
+    Users* user1 = basicFactory.createUser("IterUser1");
+    Users* user2 = adminFactory.createUser("IterUser2");
+    Users* user3 = moderatorFactory.createUser("IterUser3");
     
     testRoom->registerUser(user1);
     testRoom->registerUser(user2);
@@ -357,9 +355,13 @@ void testCommandPattern() {
     cout << "\n=== Testing Command Pattern ===" << endl;
     
     ChatRoom* cmdRoom = new Dogorithm("CommandTest");
-    UserCreationSystem userSystem;
-    Users* sender = userSystem.createUser("Sender", "basic");
-    Users* receiver = userSystem.createUser("Receiver", "basic");
+
+    BasicUserFactory basicFactory;
+    AdminUserFactory adminFactory;
+    ModeratorUserFactory moderatorFactory;
+    
+    Users* sender = basicFactory.createUser("Sender");
+    Users* receiver = basicFactory.createUser("Receiver");
     
     cmdRoom->registerUser(sender);
     cmdRoom->registerUser(receiver);
@@ -402,11 +404,14 @@ void testAdminAndModeratorFunctionality() {
     cout << "\n=== Testing Admin and Moderator Functionality ===" << endl;
     
     ChatRoom* testRoom = new CtrlCat("AdminModTest");
-    UserCreationSystem userSystem;
+
+    BasicUserFactory basicFactory;
+    AdminUserFactory adminFactory;
+    ModeratorUserFactory moderatorFactory;
     
-    Users* admin = userSystem.createUser("SuperAdmin", "admin");
-    Users* moderator = userSystem.createUser("ModUser", "moderator");
-    Users* basicUser = userSystem.createUser("RegularUser", "basic");
+    Users* admin = adminFactory.createUser("SuperAdmin");
+    Users* moderator = moderatorFactory.createUser("ModUser");
+    Users* basicUser = basicFactory.createUser("RegularUser");
     
     testRoom->registerUser(admin);
     testRoom->registerUser(moderator);
@@ -460,27 +465,25 @@ void testAdminAndModeratorFunctionality() {
 void testEdgeCasesAndIntegration() {
     cout << "\n=== Testing Edge Cases and Integration ===" << endl;
     
-    UserCreationSystem userSystem;
+    BasicUserFactory basicFactory;
+    AdminUserFactory adminFactory;
+    ModeratorUserFactory moderatorFactory;
     
     //test edge cases
-    Users* emptyName = userSystem.createUser("", "basic");
+    Users* emptyName = basicFactory.createUser("");
     runTest("Empty name handled", emptyName->getName() == "");
     delete emptyName;
     
-    Users* longName = userSystem.createUser(string(50, 'X'), "admin");
+    Users* longName = adminFactory.createUser(string(50, 'X'));
     runTest("Long name handled", longName->getName().length() == 50);
     delete longName;
-    
-    Users* wrongCase = userSystem.createUser("Test", "ADMIN");
-    runTest("Case sensitivity handled", wrongCase->getUserType() == "Basic");
-    delete wrongCase;
     
     //testing complex integration scenario
     ChatRoom* room1 = new CtrlCat("Room1");
     ChatRoom* room2 = new Dogorithm("Room2");
     
-    Users* multiUser = userSystem.createUser("MultiRoomUser", "admin");
-    Users* helper = userSystem.createUser("Helper", "basic");
+    Users* multiUser = adminFactory.createUser("MultiRoomUser");
+    Users* helper = basicFactory.createUser("Helper");
     
     //same user in multiple rooms
     room1->registerUser(multiUser);
@@ -537,11 +540,14 @@ void testPerformanceAndStress() {
     
     ChatRoom* stressRoom = new CtrlCat("StressTest");
     vector<Users*> users;
-    UserCreationSystem userSystem;
+
+    BasicUserFactory basicFactory;
+    AdminUserFactory adminFactory;
+    ModeratorUserFactory moderatorFactory;
     
     //creating many users
     for (int i = 0; i < 15; i++) {
-        Users* user = userSystem.createUser("StressUser" + intToString(i), "basic");
+        Users* user = basicFactory.createUser("StressUser" + intToString(i));
         users.push_back(user);
         stressRoom->registerUser(user);
     }
