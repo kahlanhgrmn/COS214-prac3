@@ -42,7 +42,6 @@ COMMON_SOURCES = ChatRoom.cpp \
           BasicUserFactory.cpp \
           AdminUserFactory.cpp \
           ModeratorUserFactory.cpp \
-          UserCreationSystem.cpp \
           UserIterator.cpp \
           MessageHistoryIterator.cpp \
           ChatRoomIterator.cpp \
